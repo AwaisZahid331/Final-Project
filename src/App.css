@@ -1,0 +1,495 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* styles.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Poppins:ital,wght@0,200;1,300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&family=Poppins:ital,wght@0,200;1,300&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;600&family=Poppins:ital,wght@0,200;1,300&display=swap");
+.custom-button {
+  /* Add your styling here */
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+nav {
+  /* height: 70px; */
+  box-shadow: 1px 2px 5px rgb(85, 73, 73);
+  font-family: "Catamaran", sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 498px) {
+  .text-light {
+    font-size: 11px; /* Adjust the font size as needed */
+  }
+  .container {
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+}
+/* Media query for screens smaller than 498px */
+@media screen and (max-width: 498px) {
+  .custom-button {
+    font-size: 12px; /* Adjust the font size as needed */
+    padding: 8px 12px; /* Adjust the padding as needed */
+  }
+}
+/* Media query for screens smaller than 352px */
+/* Media query for screens smaller than 500px */
+@media screen and (max-width: 500px) {
+  .d-block {
+    max-width: 700px; /* Adjust the max-width as needed */
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+  }
+}
+
+.container-md {
+  height: 300px;
+  /* color: white; */
+  border-radius: 15px 15px;
+  font-family: "Catamaran", sans-serif;
+  align-items: center;
+  font-size: 1.1rem;
+  /* background: url(/public/images/img1.jpg); */
+  /* background-color: #dad9e0; */
+}
+/* Responsive styles */
+.container-md {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Center the text */
+.content {
+  text-align: center;
+}
+
+/* Adjust text within the paragraph */
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  /* Add other styles as needed */
+}
+
+/* Margin for h1 and p */
+.content h1,
+.content p {
+  margin-top: 20px; /* Adjust the margin-top value as needed */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.card {
+  border: 0;
+  /* margin: 0px 9px; */
+}
+.card {
+  border-radius: 2px solid gray;
+}
+
+/* card group aka PRIMARY */
+.card-group .card-primary:hover {
+  box-shadow: 0 40px 60px -20px rgba(12, 5, 62, 0.15);
+  z-index: 100;
+}
+.card-group .card-primary:hover .card-title {
+  color: #4e22d0;
+}
+.card-group .card-primary .card-img-top {
+  width: 264px;
+  height: 200px;
+  margin: 80px auto 12px;
+}
+/* .card-group .card-primary .card-body > .badge {
+  /* margin-bottom: 24px; */
+/* }  */
+.card-group .card-primary .card-body {
+  padding: 0 32px;
+}
+.card-group .card-primary .card-title {
+  color: #261c6a;
+  font-size: 22px;
+  /* line-height: 1.54; */
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.card-group .card-primary .card-text {
+  color: #261c6a;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Styles for the FAQ section */
+section {
+  padding: 60px 0; /* Adjust padding as needed */
+}
+
+.text-primary {
+  color: #007bff; /* Change the primary text color as desired */
+}
+
+/* Center align h3 and p */
+h3,
+p {
+  text-align: center;
+}
+
+/* Styles for each FAQ item */
+.mb-4 {
+  margin-bottom: 1.5rem; /* Adjust margin bottom */
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Adjust margin bottom */
+}
+
+/* Icon styles */
+.text-primary .far,
+.text-primary .fas {
+  color: #007bff; /* Match the primary text color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mb-4 {
+    margin-bottom: 2rem; /* Adjust margin bottom for smaller screens */
+  }
+}
+.container-fluid {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.1rem;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.animated-image {
+  width: 450px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+  animation-name: animateImage;
+  animation-duration: 2s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Will repeat indefinitely */
+  animation-timing-function: linear; /* Animation timing */
+}
+
+@keyframes animateImage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); /* Modify scale as per your preference */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 960px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+  .clearfix {
+    display: block;
+  }
+  .animated-image {
+    float: none;
+    margin: 0 auto; /* Center the image */
+    display: block;
+    max-width: 100%; /* Ensure image doesn't overflow */
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .animated-image {
+    float: right;
+    max-width: 60%; /* Adjust as needed */
+    margin-left: 20px; /* Adjust spacing between image and text */
+    /* display: none; */
+  }
+}
+
+.card {
+  margin: 20px; /* Adjust as needed */
+}
+/* Navbar ke links ka text color dark mode mein white karna */
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+/* app.css */
+
+/* Signup form styling */
+.signup-form {
+  position: absolute;
+  top: 50px; /* Adjust this value according to your navbar height */
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-form {
+  position: absolute;
+  top: 50px; /* Adjust this value according to your navbar height */
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  z-index: 1000; /* Adjust the z-index value as needed */
+}
+
+
+
+
+.btn-custom {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition */
+  width: 100%; /* Set the width to 100% to occupy equal space */
+  height: 50px; /* Set a fixed height for all buttons */
+  margin-bottom: 10px; /* Add some space between buttons */
+}
+
+.btn-custom:hover {
+  transform: scale(1.05); /* Increase button size on hover */
+}
+
+.divider {
+  border-top: 2px solid #4CAF50; /* Green border */
+  margin-top: 20px; /* Add space between heading and divider */
+}
+
+.heading {
+  color: rgb(22, 22, 22); /* Green heading */
+}
+
+.department-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////// */
+.formstyle {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+.pdf{
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1423' height='557' preserveAspectRatio='none' viewBox='0 0 1423 557'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1575%26quot%3b)' fill='none'%3e%3crect width='1423' height='557' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1576%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1517.8666666666666 557L0 557 L0 317.6Q42.04 288.49%2c 71.14999999999999 330.53Q113.84 302.07%2c 142.29999999999998 344.77Q176.85 260.74%2c 260.8833333333333 295.29Q330.32 246.15%2c 379.46666666666664 315.59Q430.21 295.19%2c 450.6166666666666 345.93Q524.85 301.58%2c 569.1999999999999 375.81Q581.87 317.34%2c 640.3499999999999 330.01Q656.01 274.52%2c 711.4999999999999 290.18Q776.16 236.26%2c 830.0833333333333 300.92Q890.16 289.85%2c 901.2333333333332 349.93Q941.77 271.89%2c 1019.8166666666666 312.43Q1092.85 266.88%2c 1138.3999999999999 339.92Q1183.79 314.16%2c 1209.55 359.56Q1219.33 298.19%2c 1280.7 307.97Q1351.77 260.46%2c 1399.2833333333333 331.53Q1465.3 278.96%2c 1517.8666666666666 344.98z' fill='%23182f5d'%3e%3c/path%3e%3cpath d='M1470.4333333333334 557L0 557 L0 390.83Q39.15 358.83%2c 71.14999999999999 397.99Q84.84 340.54%2c 142.29999999999998 354.23Q213.92 307.26%2c 260.8833333333333 378.88Q302.04 348.89%2c 332.0333333333333 390.05Q353.67 340.54%2c 403.1833333333333 362.17Q489.86 330.26%2c 521.7666666666667 416.94Q594.28 370.87%2c 640.35 443.39Q678.01 362.47%2c 758.9333333333334 400.13Q832.57 355.18%2c 877.5166666666668 428.81Q918.38 398.52%2c 948.6666666666667 439.38Q950.52 370.08%2c 1019.8166666666667 371.94Q1049.86 330.84%2c 1090.9666666666667 360.88Q1183.47 334.8%2c 1209.55 427.3Q1262.51 361.67%2c 1328.1333333333332 414.63Q1378.84 394.18%2c 1399.2833333333333 444.89Q1429.73 404.19%2c 1470.4333333333334 434.64z' fill='rgba(119%2c 159%2c 226%2c 1)'%3e%3c/path%3e%3cpath d='M1494.1500000000003 557L0 557 L0 480.87Q63.33 425.62%2c 118.58333333333333 488.95Q160.45 412.24%2c 237.16666666666666 454.11Q305.07 403.43%2c 355.75 471.34Q431.5 428.5%2c 474.3333333333333 504.25Q501.35 412.68%2c 592.9166666666666 439.7Q641.68 369.88%2c 711.5 418.65Q773.67 409.66%2c 782.65 471.83Q863.5 434.09%2c 901.2333333333333 514.94Q952.47 447.59%2c 1019.8166666666667 498.83Q1048.88 456.75%2c 1090.9666666666667 485.81Q1113.32 437.01%2c 1162.1166666666668 459.36Q1177.91 404%2c 1233.2666666666669 419.79Q1277.24 392.61%2c 1304.416666666667 436.59Q1347.19 408.21%2c 1375.566666666667 450.98Q1453.15 409.98%2c 1494.1500000000003 487.56z' fill='rgba(98%2c 158%2c 234%2c 1)'%3e%3c/path%3e%3cpath d='M1541.5833333333333 557L0 557 L0 551.38Q24.83 505.06%2c 71.14999999999999 529.9Q135.63 475.8%2c 189.73333333333332 540.28Q204.58 483.98%2c 260.8833333333333 498.83Q326.99 446.36%2c 379.46666666666664 512.47Q434.17 496.03%2c 450.6166666666666 550.73Q519.84 501.37%2c 569.1999999999999 570.59Q580.54 510.79%2c 640.3499999999999 522.13Q669.29 479.92%2c 711.4999999999999 508.87Q798.62 477.4%2c 830.0833333333333 564.52Q854.07 517.36%2c 901.2333333333332 541.35Q923.17 492.14%2c 972.3833333333332 514.08Q1000.61 471.15%2c 1043.5333333333333 499.38Q1143.21 480.48%2c 1162.1166666666666 580.16Q1209.19 508.65%2c 1280.6999999999998 555.72Q1293.23 497.11%2c 1351.85 509.64Q1378.37 465%2c 1423 491.52Q1518.77 468.7%2c 1541.5833333333333 564.47z' fill='rgba(235%2c 223%2c 223%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1575'%3e%3crect width='1423' height='557' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1576'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(216%2c 215%2c 22%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+/* Styling for input fields */
+.form-control {
+  width: calc(100% - 22px); /* Full width minus padding */
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Styling for input fields with glow effect */
+.form-control:focus {
+  border-color: #4a90e2; /* Light blue border */
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Blue glow */
+  outline: none;
+}
+
+/* Styling for the submit button */
+.btn-primary {
+  background: #4114e6; /* Blue background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Blue glow */
+}
+
+/* Hover effect for the submit button */
+.btn-primary:hover {
+  background: #357abd; /* Darker blue */
+  box-shadow: 0 0 12px rgba(54, 122, 189, 0.7); /* Darker blue glow */
+}
+
+/* ................................ */
+
+.uploaded {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.output-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.inner-div {
+  padding: 10px 45px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-div h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.inner-div {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.delete-icon:hover {
+  background: red;
+  color: white;
+}
