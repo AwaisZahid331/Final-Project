@@ -18,8 +18,8 @@ const Help = () => {
   return (
     <>
       {/* Section: FAQ */}
-      <br /><br /><br />
-      <div className="container-fluid">
+      <br />
+      <div className="container-fluid" style={{backgroundColor:"rgb(25, 26, 26)", color:"white"}}>
         <section className='p-4'>
           <h3 className="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
           <p className="text-center mb-5">
@@ -76,13 +76,9 @@ const Help = () => {
           </div>
         </section>
       </div>
-      <br />
+      
 
-      <div className="container">
-        <hr />
-       
-        <br /><br /><br /><br />
-      </div>
+   
     </>
   );
 }

@@ -2,73 +2,84 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './Signup';
-import '../App.css';
 import Login from './Login';
-// import UploadedPDF from './uploadedPDF';
+import '../App.css';
 
 const Navbar = () => {
-
-
   const [showSignup, setShowSignup] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [popup, setPopup] = useState('');
-  const [signupFormData, setSignupFormData] = useState({ username: '', email: '', password: '' });
-  const [loginFormData, setLoginFormData] = useState({ email: '', password: '' });
 
   const handleSignupClick = () => {
     setShowSignup(true);
     setShowLogin(false);
-    setSignupFormData({ username: '', email: '', password: '' }); // Clear signup form data
   };
 
   const handleLoginClick = () => {
     setShowLogin(true);
     setShowSignup(false);
-    setLoginFormData({ email: '', password: '' }); // Clear login form data
   };
 
- 
+  const closeModal = () => {
+    setShowSignup(false);
+    setShowLogin(false);
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{ backgroundColor: 'white' }}>
-      <div className="container-fluid">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/home">Home</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about">About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/pastpapers">Past Papers</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">Contact</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/help">Help</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/uploadedPDF">Uploades</NavLink>
-            </li>
-          </ul>
-        </div>
-        <div>
-          {popup && <div>{popup}</div>}
-          <button className="btn btn-primary me-2 btn-sm" onClick={handleSignupClick}>Sign Up</button>
-          <button className="btn btn-success btn-sm" onClick={handleLoginClick}>Login</button>
-
-          {showSignup && <Signup setPopup={setPopup} />}
-          {showLogin && <Login setPopup={setPopup} />}
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark shadow fixed-top" style={{background:"rgb(25, 26, 26)"}}>
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/home" activeClassName="active">Home</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/about" activeClassName="active">About</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/pastpapers" activeClassName="active">Past Papers</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/contact" activeClassName="active">Contact</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/help" activeClassName="active">Help</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/uploadedPDF" activeClassName="active">Uploads</NavLink>
+              </li>
+            </ul>
+          </div>
           <div>
+            {popup && <div>{popup}</div>}
+            <button className="sn" onClick={handleSignupClick}>Sign Up</button>
+            <button className="sn" onClick={handleLoginClick}>Login</button>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Modal for Signup */}
+      {showSignup && (
+        <div className="modal-background" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <Signup setPopup={setPopup} closeModal={closeModal} />
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Login */}
+      {showLogin && (
+        <div className="modal-background" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <Login setPopup={setPopup} closeModal={closeModal} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

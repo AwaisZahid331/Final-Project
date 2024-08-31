@@ -8,7 +8,10 @@ import Help from "./MyComponents/Help";
 import Home from "./MyComponents/Home";
 import Footer from "./MyComponents/Footer";
 import UploadedPDF from "./MyComponents/uploadedPDF";
-
+// For authentication
+import Signup from "./MyComponents/Signup";
+import Login from "./MyComponents/Login";
+import ForgotPassword from "./MyComponents/ForgotPassword";
 // Departments
 import ComSci from "./Departments/ComSci";
 import Bba from "./Departments/Bba";
@@ -169,12 +172,14 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
           <Route path="/uploadedPDF" element={<UploadedPDF />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           {/* <Route path="/signup" element={<Signup />} /> */}
 
           <Route path="/ComSci" element={<ComSci />} />
           <Route path="/bba" element={<Bba />} />
-          <Route path="/bio" element={<Bio />} />
+          <Route path="/bio" element={<Bio />} /> 
           <Route path="/botnay" element={<Botnay />} />
           <Route path="/chemistry" element={<Chemistry />} />
           <Route path="/ecnomics" element={<Ecnomics />} />

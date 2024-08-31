@@ -1,82 +1,132 @@
-// import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../App.css';
-
-const Home = (props) => {
-  // useEffect(() => {
-  //   const script1 = document.createElement('script');
-  //   script1.src = 'https://cdn.botpress.cloud/webchat/v1/inject.js';
-  //   script1.async = true;
-  //   document.body.appendChild(script1);
-
-  //   const script2 = document.createElement('script');
-  //   script2.src = 'https://mediafiles.botpress.cloud/8d7fb67f-471e-46da-8bad-f22b3ad957de/webchat/config.js';
-  //   script2.defer = true;
-  //   document.body.appendChild(script2);
-
-  //   // Cleanup function to remove the scripts when the component unmounts
-  //   return () => {
-  //     document.body.removeChild(script1);
-  //     document.body.removeChild(script2);
-  //   };
-  // }, []);
-
+import React from "react";
+import "../App.css"; // Assuming you have some custom styles here
+import { NavLink } from "react-router-dom";
+const Home = () => {
   return (
     <>
-      <div>
-        <div id="carouselExampleDark" className="carousel carousel-dark slide">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src="/images/img1.jpg" className="d-block w-100" alt="..." style={{ height: "500px" }} />
-              <div className="carousel-caption d-flex align-items-center justify-content-center h-100">
-                <div className="text-light"><br /> <br /><br />
-                  <h3>Acquire expertise with skillHub.</h3>
-                  <p>This blog offers an abundance of assets including UOS Past Papers, Past Paper Arrangements, Talk Notes, Slides,
-                    Suggested PDF Books, PDF Freebees, and Course Blueprints from the CS (Software engineering Division).
-                    Custom fitted for understudies signed up for Private Associate Schools of the College of Sargodha, our essential accentuation is on conveying Past Papers
-                    and their Answers. We invite your contributions to foster a cooperative environment that supports and helps
-                    individual students. Your active participation helps enhance the learning experience for everyone.</p>
-                  <div>
-                    <NavLink to="/contact"><button className="btn btn-primary" style={{ margin: "3px" }}>Contact Us</button></NavLink>
-                    <NavLink to="/pastpapers"><button className="btn btn-success">Past Papers</button></NavLink>
-                  </div>
-
-                </div>
+      <div className="black-background">
+        {" "}
+        <br />
+        <br />
+        <div className="container text-white mt-4">
+          <div className="row align-items-center">
+            {/* Image on the left with glow effect */}
+            <div className="col-md-6 text-center mb-4">
+              <div className="shadow-background">
+                <img
+                  src="https://cdn.pixabay.com/photo/2024/02/09/15/22/ai-generated-8563260_1280.jpg"
+                  alt="University Resources"
+                  className="img-fluid rounded main-image glow-effect zoom-animation" // Updated class here
+                />
+              </div>
+            </div>
+            {/* Text on the right */}
+            <div className="col-md-6">
+              <h2 className="text-center hlo">
+                Boost Your Studies with <span style={{color:"rgb(255,140,0)"}}>Student Resource Hub</span>
+              </h2>
+              <p className="text-justify">
+                Discover a world of educational resources designed specifically
+                for university students. Our platform offers an extensive
+                collection of notes, PDFs, and specialized courses to help you
+                excel in your studies.
+              </p>
+              <p className="text-justify">
+                Whether you're looking to access the best study materials,
+                upload your own notes, or interact with a smart chatbot for
+                quick assistance, we provide all the tools you need for a
+                successful academic journey.
+              </p>
+              <p className="text-justify">
+                With exclusive content for UOS students and a user-friendly
+                interface, our website is your ultimate partner in achieving
+                your educational goals. Join us today and take your learning
+                experience to the next level!
+              </p>
+              <div className="text-center">
+                <NavLink to="/about">
+                  {" "}
+                  <button className="snn">Explore More</button>
+                </NavLink>
               </div>
             </div>
           </div>
+        </div>{" "}
+        <hr />
+        <br />
+   
+
+        <div class="container text-center py-5">
+          <h2 class="mb-5">How It Works</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="icon-container">
+                <i class="bi bi-person-plus"></i>
+              </div>
+              <h4 class="mt-3">Sign Up</h4>
+              <p>
+                Montes vivamus curae quisque et primis pretium nullam. Congue
+                dis convalis eget ipsum cubilia ante.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <div class="icon-container">
+                <i class="bi bi-pc-display-horizontal"></i>
+              </div>
+              <h4 class="mt-3">Get Access</h4>
+              <p>Access to question bank of over 2000 questions.</p>
+            </div>
+            <div class="col-md-3">
+              <div class="icon-container">
+                <i class="bi bi-patch-question"></i>
+              </div>
+              <h4 class="mt-3">Practice Questions</h4>
+              <p>
+                Prepare for the MLA exam in multiple modes of revision and track
+                your progress with your personalised dashboard.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <div class="icon-container">
+                <i class="bi bi-clipboard-check-fill"></i>
+              </div>
+              <h4 class="mt-3">Get Result</h4>
+              <p>
+                Compare your results with your peers with advanced analytics.
+              </p>
+            </div>
+          </div>{" "}
+          <br />
         </div>
-
-        {/* --------------------------------- */}
-        <br /><br />
-        <div className="container mt-4" >
-          <div className="clearfix mt-4 ">
-            <h2>Your Gateway to Premium Academic <br /> Resources</h2>
-            <img src="/images/edu.png" class="col-md-6 float-md-end mb-3 ms-md-3 rounded-start  animated-image" alt="..." />
-            <p>
-              Creating a website tailored for university students is a fantastic initiative! Providing notes,
-              past papers, and helpful materials on your platform would be incredibly beneficial for students.
-            </p>
-
-            <p>
-              You can not only offer academic support but also incorporate practical applications and real-life
-              examples related to their courses.
-            </p>
-
-            <p>
-              Through this approach, you'll assist them in understanding subjects and connecting theoretical knowledge to
-              real-world contexts, enhancing their overall learning experience.
-              These resources will enrich their academic journey, empowering them to feel more confident and prepared.
-            </p>
-            <p>
-              <b>The paid section</b> a result of dedicated crafting and personal expertise, stands as a treasure trove for
-              academic enrichment. With my firsthand experience in creating these notes, their reliability and quality
-              are assured, promising invaluable assets for students seeking depth in their studies.
-            </p>
-          </div>
-
-        </div><br /><br />
       </div>
+
+      {/* this is for  */}
+
+      <section class="testimonial-section text-center">
+        <div class="container">
+            <h2 class="mb-4">What Our Students Are Saying</h2>
+            <p class="mb-5">Hear directly from our students about their experiences and journeys at our university.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <p>This university has provided me with the best learning experience. The faculty and resources are outstanding!"</p>
+                            <p class="testimonial-author">Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <p>The diverse student community and opportunities for personal growth have made my time here unforgettable."</p>
+                            <p class="testimonial-author">Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </>
   );
 };
