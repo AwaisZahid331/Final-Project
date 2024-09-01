@@ -1007,130 +1007,202 @@ p {
 }
 
 /* General Styles for the Form */
-.form {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  font-family: inherit;
-  gap: 10px;
-  /* padding: 2em; */
-  background-color: #191e25;
-  border-radius: 20px;
-}
 
-.form-heading {
-  text-align: center;
-  margin: 2em;
-  color: rgb(255, 140, 0);
-  font-size: 1.2em;
-}
 
-.form-field {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  border-radius: 10px;
-  padding: 0.6em;
-  color: white;
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-}
 
-.input-field {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: #ccd6f6;
-  /* padding: 1em; */
-}
 
-.sendMessage-btn {
-  cursor: pointer;
-  margin-bottom: 3em;
-  padding: 1em;
-  border-radius: 10px;
-  border: 1px solid rgb(255, 140, 0);
-  background-color: transparent;
-  color: rgb(255, 140, 0);
-  font-weight: bold;
-  transition: all ease-in-out 0.3s;
-}
 
-.sendMessage-btn:hover {
-  background-color: rgb(255, 140, 0);
-  color: #000;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-}
 
-/* Form Card Styles */
-.form-card1 {
-  border-radius: 22px;
-  transition: all 0.3s;
-}
-
-.form-card1:hover {
-  box-shadow: 0px 0px 30px 1px rgb(255, 140, 0);
-}
-
-.form-card2 {
-  transition: all 0.2s;
-}
-
-.form-card2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
-
-/* Contact Container */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between the form and the map */
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px; /* Adjust as needed */
-}
-
-.map-container {
-  flex: 1;
-  min-width: 300px; /* Adjust as needed */
-}
 
 body {
-  background-color: #343a40;
+  background-color: rgb(25, 26, 26);
 }
 
 /* Animated Gradient Background */
-.animated-background {
-  position: fixed; /* Fixed position to cover the entire viewport */
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1; /* Place behind other content */
-  background: linear-gradient(270deg, #1d1d1d, #0a192f, #ddb70f);
-  background-size: 600% 600%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Your existing container styles */
 .container {
   position: relative;
   color: #fff;
   padding: 20px;
+}
+
+
+
+/* for about page */
+
+.contact-info {
+  display: flex; /* Use Flexbox for side-by-side layout */
+  align-items: center; /* Vertically center the items */
+  gap: 15px; /* Adds space between the image and the text */
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex;
+  align-items: center; /* Aligns the items vertically centered */
+  margin-bottom: 20px; /* Adds space below the contact info section */
+}
+.para{
+ width: 150px;
+}
+.contact-info img {
+  width: 140px; /* Sets the width of the image */
+  height: 170px; /* Maintains aspect ratio */
+  margin-right: 15px; /* Adds space between the image and the text */
+}
+
+.contact-info-text {
+  max-width: calc(100% - 80px); /* Ensures the text doesn't overlap the image */
+}
+
+.contact-details {
+ /* display: flex; */
+  margin-top: 20px; /* Adds space above the contact details section */
+}
+
+/* Other Styles */
+.bg-dark {
+  background-color: #343a40;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.half-width {
+  flex: 1;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+  /* background-color: rgb(255, 140, 0); */
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgb(255, 140, 0); */
+}
+
+.full-width {
+  flex: 1 0 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px; 
+  /* background-color: #343a40;  */
+  border-radius: 4px;
+  /* color: white;  */
+  font-size: 16px;
+  border: 1px solid white;
+}
+
+
+.input:focus {
+  border-color: white;
+  outline: none;
+  /* color: white; */
+  box-shadow: 0 0 19px rgba(243, 244, 245, 0.5);
+}
+
+.submit-button {
+  background-color: rgb(255, 140, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  /* background-color: #0056b3; */
+  box-shadow: rgb(255, 140, 0);
+}
+
+
+.map {
+  display: flex;
+  justify-content: center; /* Center iframe horizontally within the map container */
+  align-items: center; /* Center iframe vertically if the container had height */
+  padding: 20px; /* Adds space inside the map container to prevent touching edges */
+}
+
+.map iframe {
+  max-width: 100%; /* Ensures iframe doesn't exceed the container's width */
+  margin: 0 auto; /* Center iframe if it has width less than container */
+  width: 200%; /* Set a fixed width for the iframe */
+  height: 450px;
+  border-radius: 10px; /* Set a fixed height for the iframe */
+}
+.working-hours{
+  /* color: rgb(255, 140, 0); */
+  font-size: 2rem;
+}
+
+
+
+
+
+
+.content-section {
+  padding: 2rem 0;
+}
+
+.content-section h3 {
+  font-weight: bold;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-section ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.content-section ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745; /* Customize check mark color */
+}
+
+.image-column {
+  display: flex;
+  align-items: center;
+}
+.image-column img{
+  height: 800px;
+  width: 900px;
 }
