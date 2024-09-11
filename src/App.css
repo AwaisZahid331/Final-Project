@@ -102,22 +102,57 @@ nav {
 }
 
 /* Responsive styles */
+.video-bg-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 
-/* Center the text */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* Lower opacity for the video */
+  z-index: -1;
+}
+
 .content {
-  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-60px);
+  /* opacity: 0.9; */
+  height: 100%;
 }
 
-.content p {
-  font-size: 16px;
-  line-height: 1.6;
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Margin for h1 and p */
-.content h1,
-.content p {
-  margin-top: 20px; /* Adjust the margin-top value as needed */
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  max-width: 900px;
+  margin: 10px auto;
 }
+
+.lead {
+  font-weight: 400;
+}
+
+
 
 @keyframes slidein {
   from {
@@ -214,7 +249,7 @@ p {
 .content {
   padding: 20px;
   margin-top: 50px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 8px;
 }
 
@@ -342,9 +377,6 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-.pdf {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1423' height='557' preserveAspectRatio='none' viewBox='0 0 1423 557'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1575%26quot%3b)' fill='none'%3e%3crect width='1423' height='557' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1576%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1517.8666666666666 557L0 557 L0 317.6Q42.04 288.49%2c 71.14999999999999 330.53Q113.84 302.07%2c 142.29999999999998 344.77Q176.85 260.74%2c 260.8833333333333 295.29Q330.32 246.15%2c 379.46666666666664 315.59Q430.21 295.19%2c 450.6166666666666 345.93Q524.85 301.58%2c 569.1999999999999 375.81Q581.87 317.34%2c 640.3499999999999 330.01Q656.01 274.52%2c 711.4999999999999 290.18Q776.16 236.26%2c 830.0833333333333 300.92Q890.16 289.85%2c 901.2333333333332 349.93Q941.77 271.89%2c 1019.8166666666666 312.43Q1092.85 266.88%2c 1138.3999999999999 339.92Q1183.79 314.16%2c 1209.55 359.56Q1219.33 298.19%2c 1280.7 307.97Q1351.77 260.46%2c 1399.2833333333333 331.53Q1465.3 278.96%2c 1517.8666666666666 344.98z' fill='%23182f5d'%3e%3c/path%3e%3cpath d='M1470.4333333333334 557L0 557 L0 390.83Q39.15 358.83%2c 71.14999999999999 397.99Q84.84 340.54%2c 142.29999999999998 354.23Q213.92 307.26%2c 260.8833333333333 378.88Q302.04 348.89%2c 332.0333333333333 390.05Q353.67 340.54%2c 403.1833333333333 362.17Q489.86 330.26%2c 521.7666666666667 416.94Q594.28 370.87%2c 640.35 443.39Q678.01 362.47%2c 758.9333333333334 400.13Q832.57 355.18%2c 877.5166666666668 428.81Q918.38 398.52%2c 948.6666666666667 439.38Q950.52 370.08%2c 1019.8166666666667 371.94Q1049.86 330.84%2c 1090.9666666666667 360.88Q1183.47 334.8%2c 1209.55 427.3Q1262.51 361.67%2c 1328.1333333333332 414.63Q1378.84 394.18%2c 1399.2833333333333 444.89Q1429.73 404.19%2c 1470.4333333333334 434.64z' fill='rgba(119%2c 159%2c 226%2c 1)'%3e%3c/path%3e%3cpath d='M1494.1500000000003 557L0 557 L0 480.87Q63.33 425.62%2c 118.58333333333333 488.95Q160.45 412.24%2c 237.16666666666666 454.11Q305.07 403.43%2c 355.75 471.34Q431.5 428.5%2c 474.3333333333333 504.25Q501.35 412.68%2c 592.9166666666666 439.7Q641.68 369.88%2c 711.5 418.65Q773.67 409.66%2c 782.65 471.83Q863.5 434.09%2c 901.2333333333333 514.94Q952.47 447.59%2c 1019.8166666666667 498.83Q1048.88 456.75%2c 1090.9666666666667 485.81Q1113.32 437.01%2c 1162.1166666666668 459.36Q1177.91 404%2c 1233.2666666666669 419.79Q1277.24 392.61%2c 1304.416666666667 436.59Q1347.19 408.21%2c 1375.566666666667 450.98Q1453.15 409.98%2c 1494.1500000000003 487.56z' fill='rgba(98%2c 158%2c 234%2c 1)'%3e%3c/path%3e%3cpath d='M1541.5833333333333 557L0 557 L0 551.38Q24.83 505.06%2c 71.14999999999999 529.9Q135.63 475.8%2c 189.73333333333332 540.28Q204.58 483.98%2c 260.8833333333333 498.83Q326.99 446.36%2c 379.46666666666664 512.47Q434.17 496.03%2c 450.6166666666666 550.73Q519.84 501.37%2c 569.1999999999999 570.59Q580.54 510.79%2c 640.3499999999999 522.13Q669.29 479.92%2c 711.4999999999999 508.87Q798.62 477.4%2c 830.0833333333333 564.52Q854.07 517.36%2c 901.2333333333332 541.35Q923.17 492.14%2c 972.3833333333332 514.08Q1000.61 471.15%2c 1043.5333333333333 499.38Q1143.21 480.48%2c 1162.1166666666666 580.16Q1209.19 508.65%2c 1280.6999999999998 555.72Q1293.23 497.11%2c 1351.85 509.64Q1378.37 465%2c 1423 491.52Q1518.77 468.7%2c 1541.5833333333333 564.47z' fill='rgba(235%2c 223%2c 223%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1575'%3e%3crect width='1423' height='557' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1576'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(216%2c 215%2c 22%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 
 /* Styling for input fields */
@@ -475,9 +507,9 @@ p {
   border-radius: 50%;
   border: 2px solid #444;
   box-shadow: -10px -10px 10px #bdb9f1, 0px -10px 10px 0px #4b4350,
-    10px -10px 10px #e0d7dc, 10px 0 10px #d3d00e, 10px 10px 10px 0px #e66e33,
+  10px -10px 10px #e0d7dc, 10px 0 10px #d3d00e, 10px 10px 10px 0px #e66e33,
     0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
-  animation: rot55 0.9s linear infinite;
+    animation: rot55 0.9s linear infinite;
   position: relative;
   left: -90px;
 }
@@ -509,9 +541,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 0.4em;
+  /* padding-left: 2em;
+  padding-right: 2em; */
+  /* padding-bottom: 0.4em; */
   background-color: #171717;
   border-radius: 25px;
   transition: 0.4s ease-in-out;
@@ -524,18 +556,42 @@ p {
 
 #heading {
   text-align: center;
-  margin: 2em;
+  margin: 1em;
   color: rgb(255, 140, 0);
   font-size: 1.5em;
 }
+/* additional  */
 
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the space between the two columns */
+}
+
+.field {
+  flex: 1; /* Make both input fields take equal space */
+}
+
+.input-field {
+  width: 100%;
+  padding: 2px;
+  /* margin: 34px; */
+  margin: 2px 5px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* //////////////// */
 .field {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
   border-radius: 25px;
-  padding: 0.6em;
+  padding: 0.3em;
+  /* width: 24rem; */
   border: none;
   outline: none;
   color: white;
@@ -561,7 +617,8 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 2.8em;
+  /* margin-top: 2.8em; */
+  width:5rem;
 }
 
 .button1 {
@@ -569,15 +626,34 @@ p {
   padding-left: 1.3em;
   padding-right: 1.3em;
   border-radius: 5px;
-  margin-right: 0.5em;
+  /* margin-bottom: 1.5em; */
   border: none;
   outline: none;
   transition: 0.4s ease-in-out;
+  margin-left: 40px;
+  background-color: rgb(255, 140, 0);
+  color: white;
+}
+.button11 {
+  padding: 0.5em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+  border-radius: 5px;
+  /* margin-bottom: 1.5em; */
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  margin-left: 60px;
   background-color: rgb(255, 140, 0);
   color: white;
 }
 
 .button1:hover {
+  background-color: rgb(255, 140, 0);
+  color: white;
+  font-weight: bold;
+}
+.button11:hover {
   background-color: rgb(255, 140, 0);
   color: white;
   font-weight: bold;
@@ -977,7 +1053,7 @@ p {
 
 .child:hover > .button {
   transform: translate3d(0px, 20px, 30px) perspective(80px) rotateX(-60deg)
-    translateY(2px) translateZ(10px);
+  translateY(2px) translateZ(10px);
 }
 
 /* for footer */
@@ -1044,7 +1120,7 @@ body {
   margin-bottom: 20px; /* Adds space below the contact info section */
 }
 .para{
- width: 150px;
+  width: 150px;
 }
 .contact-info img {
   width: 140px; /* Sets the width of the image */
@@ -1057,7 +1133,7 @@ body {
 }
 
 .contact-details {
- /* display: flex; */
+  /* display: flex; */
   margin-top: 20px; /* Adds space above the contact details section */
 }
 
@@ -1206,3 +1282,138 @@ body {
   height: 800px;
   width: 900px;
 }
+
+
+
+
+
+
+
+
+/* This is for uploaded page */
+
+
+/* Full-width container */
+/* Full-width container */
+.pdf-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling with background image */
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: brightness(0.7); /* Darken the image */
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+  font-size: 38px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+.upload-section,
+.pdf-list-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.upload-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.view-btn {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.pdf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pdf-item {
+  background-color: #f1f3f5;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-title {
+  font-size: 18px;
+  color: #343a40;
+  margin: 0;
+}
+
+.no-pdf-text {
+  font-size: 16px;
+  color: #6c757d;
+}
+/* This is for about page and for cards */
+/* From Uiverse.io by gharsh11032000 */ 
+
+
+

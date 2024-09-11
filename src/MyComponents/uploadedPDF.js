@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+// import "./UploadedPDF.css"; // Link the new CSS file
 
 const UploadedPDF = () => {
   const [file, setFile] = useState(null);
@@ -37,8 +38,7 @@ const UploadedPDF = () => {
       console.log("Upload result:", result.data);
       if (result.data.status === "ok") {
         alert("Uploaded Successfully");
-        // Fetch the updated list of files
-        getPDFs();
+        getPDFs(); // Fetch the updated list of files
       } else {
         alert("Upload failed");
       }
@@ -59,69 +59,90 @@ const UploadedPDF = () => {
 
   const deletePDF = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/delete-file/${id}`);
-      alert("File deleted successfully");
-      getPDFs(); // Refresh the list of PDFs
+      const response = await axios.delete(`http://localhost:5000/delete-file/${id}`);
+      if (response.status === 200) {
+        alert("File deleted successfully");
+        getPDFs(); // Refresh the list of PDFs after deletion
+      } else {
+        alert("Failed to delete file");
+      }
     } catch (error) {
       console.error("Error deleting file:", error);
       alert("An error occurred while deleting the file");
     }
   };
- 
+
   return (
     <>
-    <div className="pdf">
-   <br /><br />
-      <div className="formstyle">
-        <h3>Upload PDF</h3>
-        <form onSubmit={submitPDF}>
-          <input
-            type="text"
-            placeholder="Title"
-            className="form-control"
-            required
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <br />
-          <input
-            type="file"
-            className="form-control"
-            accept="application/pdf"
-            required
-            onChange={(e) => setFile(e.target.files[0])}
-          />
-          <br />
-          <button className="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
-      <div className="uploaded">
-        <h3>Uploaded PDFs</h3>
-        <div className="output-div">
-          {allPDFs.length === 0
-            ? "No PDFs uploaded"
-            : allPDFs.map((data) => (
-                <div className="inner-div" key={data._id}>
-                  <h5>Title: {data.title}</h5>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => showPDF(data.pdf)}
-                  >
-                    Show PDF
-                  </button>
-                  <i
-                    className="fas fa-times delete-icon"
-                    onClick={() => deletePDF(data._id)}
-                    title="Delete"
-                  ></i>
-                </div>
-              ))}
+    <br/>
+    <br/>
+    <div className="pdf-container">
+      <header className="header">
+        <img src="https://t4.ftcdn.net/jpg/03/06/22/13/360_F_306221381_hT611gyYaBpiuD0VCV33s74sdggUcSKA.jpg" alt="PDF Background" className="header-img" />
+        <div className="header-content">
+          <h1>PDF Upload & Viewer</h1>
+          <p>Upload, view, and manage your Data easily!</p>
         </div>
-      </div>
+      </header>
+
+      <section className="upload-section">
+        <div className="form-container">
+          <h3>Upload a New PDF</h3>
+          <form onSubmit={submitPDF}>
+            <label className="form-label">Title</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter PDF title"
+              required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              />
+            <label className="form-label">Select PDF</label>
+            <input
+              type="file"
+              className="form-control"
+              accept="application/pdf"
+              required
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+            <button className="btn upload-btn" type="submit">
+              Upload PDF
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section className="pdf-list-section">
+        <h3>Uploaded PDFs</h3>
+        <div className="pdf-list">
+          {allPDFs.length === 0 ? (
+            <p className="no-pdf-text">No PDFs uploaded yet.</p>
+          ) : (
+            allPDFs.map((data) => (
+              <div className="pdf-item" key={data._id}>
+                <div className="pdf-info">
+                  <h5 className="pdf-title">{data.title}</h5>
+                  <button
+                    className="btn view-btn"
+                    onClick={() => showPDF(data.pdf)}
+                    >
+                    View PDF
+                  </button>
+                  <button
+                    className="btn delete-btn"
+                    onClick={() => deletePDF(data._id)}
+                  >
+                    Delete PDF
+                  </button>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
     </div>
-  </>
+          </>
   );
 };
 

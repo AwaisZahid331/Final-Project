@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="row" style={{ marginTop: "20px" }}>
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   {/* <!-- Content --> */}
-                  <h6 className="text-uppercase fw-bold">Skill Hub</h6>
+                  <h6 className="text-uppercase fw-bold">Student Resource Hub</h6>
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
                     style={{

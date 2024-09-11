@@ -14,7 +14,7 @@ const Home = () => {
             <div className="col-md-6 text-center mb-4">
               <div className="shadow-background">
                 <img
-                  src="https://cdn.pixabay.com/photo/2024/02/09/15/22/ai-generated-8563260_1280.jpg"
+                  src="https://media.gettyimages.com/id/1426606515/video/library-background-learning-books-and-studying-at-school-university-and-college-for-exam-test.jpg?s=480x480&k=20&c=xt-UdIJSoNWWbN-o1LsvegZbGWQWFDN1zl0wMU_X49E="
                   alt="University Resources"
                   className="img-fluid rounded main-image glow-effect zoom-animation" // Updated class here
                 />

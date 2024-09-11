@@ -1,24 +1,8 @@
 import React from "react";
-import "../App.css"; // Assuming App.css contains your styles
-
+import "../App.css";
 const Contact = () => {
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <div className="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.1691270015463!2d74.0752742744777!3d32.60167599292819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f052823b7abb9%3A0x667167070447ac43!2sZamindar%20College%20and%20University%20of%20Sargodha%20Campus!5e0!3m2!1sen!2s!4v1725181757074!5m2!1sen!2s"
-          width="600"
-          height="450"
-          style={{ border: "0" }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
       <div className="container mt-5">
         <h3 className="working-hours">
           Feel free to contact us anytime during our working days for
@@ -106,14 +90,20 @@ const Contact = () => {
                 ﺑﮭﻤﺒﺮ ﺭﻭﮈ, Islam Nagar, Gujrat, Punjab
               </p>{" "}
             </div>
-
-              {/* this is for social media */}
-              
-
-
-
+            {/* this is for social media */}
           </div>
         </div>
+      </div>
+      <div className="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.1691270015463!2d74.0752742744777!3d32.60167599292819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f052823b7abb9%3A0x667167070447ac43!2sZamindar%20College%20and%20University%20of%20Sargodha%20Campus!5e0!3m2!1sen!2s!4v1725181757074!5m2!1sen!2s"
+          width="600"
+          height="450"
+          style={{ border: "0" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
       <br />
