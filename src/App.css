@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,8 +57,10 @@
 }
 
 nav {
-  box-shadow: 1px 2px 5px rgb(85, 73, 73);
-  font-family: "Catamaran", sans-serif;
+  /* box-shadow: 1px 2px 5px #05004e; */
+  font-family:   "Ramaraja", serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: bold;
 }
 
@@ -91,12 +93,14 @@ nav {
   height: 300px;
   /* color: white; */
   border-radius: 15px 15px;
-  font-family: "Catamaran", sans-serif;
+    font-family: "Ramaraja", serif;
+    font-weight: 400;
+    font-style: normal;
   align-items: center;
   font-size: 1.1rem;
 }
 .bg {
-  background: linear-gradient(to right, #434343 0%, black 100%);
+  background: linear-gradient(to right, #05004e 0%, black 100%);
   /* background-image: url('/F_Y_Project-main/public/im.jpg'); */
   color: white;
 }
@@ -242,7 +246,9 @@ p {
   }
 }
 .container-fluid {
-  font-family: "Catamaran", sans-serif;
+  font-family:   "Ramaraja", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.1rem;
 }
 
@@ -500,41 +506,14 @@ p {
 
 /* ===================== */
 /* From Uiverse.io by mrhyddenn */
-.spinner {
-  width: 2em;
-  height: 2em;
-  cursor: not-allowed;
-  border-radius: 50%;
-  border: 2px solid #444;
-  box-shadow: -10px -10px 10px #bdb9f1, 0px -10px 10px 0px #4b4350,
-  10px -10px 10px #e0d7dc, 10px 0 10px #d3d00e, 10px 10px 10px 0px #e66e33,
-    0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
-    animation: rot55 0.9s linear infinite;
-  position: relative;
-  left: -90px;
-}
+
 .hlo {
   /* justify-content: center; */
   text-align: center;
 }
 
-.spinnerin {
-  border: 2px solid #444;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 100px;
-  transform: translate(-50%, -50%);
-}
 
-@keyframes rot55 {
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 /* ------------------------------ */
 .form {
@@ -764,7 +743,7 @@ p {
 
 /* Full page black background */
 .black-background {
-  background-color: rgb(25, 26, 26);
+  background-color: #05004e;
   color: white; /* Ensures text is white for readability */
   min-height: 100vh; /* Ensures the background covers the full viewport height */
   padding: 20px 0; /* Adds some vertical spacing */
@@ -930,6 +909,7 @@ p {
 
 .snn:hover::before,
 .sn:hover::after {
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff8c00, 0 0 30px #ff8c00;
   transform: scale(0);
 }
 
@@ -969,7 +949,7 @@ p {
 }
 
 .testimonial-section {
-  background-color: rgb(25, 26, 26);
+  background-color: #05004e;
   color: #fff;
   padding: 60px 0;
 }
@@ -1299,7 +1279,9 @@ body {
   width: 100%;
   padding: 20px;
   background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
+  font-family: "Ramaraja", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Header styling with background image */
@@ -1416,4 +1398,201 @@ body {
 /* From Uiverse.io by gharsh11032000 */ 
 
 
+.mission-section {
+  background: linear-gradient(90deg, #ffffff 0%, #635921 100%);
+  padding: 50px;
+  border-radius: 10px;
+}
 
+.mission-image img {
+  border-radius: 15px;
+}
+
+.custom-btn {
+  background-color: #4A66F5;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.mission-heading {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1E1E1E;
+}
+
+.mission-text {
+  color: #313030;
+  font-size: 16px;
+}
+
+.bi-activity{
+  color: #000;
+ font-size: 34px;
+}
+
+
+
+
+
+
+
+
+/* THis is for loader */
+
+
+
+
+
+/* App.css */
+
+/* Add your loader styles here */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: #000; /* Black background */
+  color: white; /* Loader text color */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Font style */
+
+/* .ramaraja-regular {
+  font-family: "Ramaraja", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
+
+
+/* for home page styyling  */
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Zoom animation for images */
+.zoom-effect {
+  transition: transform 0.5s ease-in-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Button pulse effect */
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Slide up animation */
+.slide-up {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Glow effect on text */
+.glow-text {
+  text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff8c00, 0 0 30px #ff8c00;
+}
+
+/* Zoom on hover for cards */
+.zoom-on-hover {
+  transition: transform 0.3s;
+}
+
+.zoom-on-hover:hover {
+  transform: scale(1.05);
+}
+
+.hloo {
+  background-color: rgb(255, 140, 0);
+  opacity: 0.6;
+  color: rgb(255, 255, 255);
+  height: 84px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: textAnimation 4s infinite;
+  border-radius: 12px 33px 42px 44px;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+    color: rgb(255, 255, 255);
+  }
+}
+
+
+
+
+/* this is for starting ::-webkit-validation-bubble-message */

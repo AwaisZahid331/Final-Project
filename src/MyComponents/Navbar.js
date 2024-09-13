@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark shadow fixed-top" style={{background:"rgb(25, 26, 26)"}}>
+      <nav className="navbar navbar-expand-lg navbar-dark shadow fixed-top" style={{backgroundColor:"#05004e"}}>
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

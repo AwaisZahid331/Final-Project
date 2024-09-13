@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const About = () => {
+  
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
+  }, []);
+
   return (
     <>
+      {/* Video Background Section */}
       <div className="video-bg-container">
         <video autoPlay muted loop className="bg-video">
           <source
@@ -13,7 +21,7 @@ const About = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="content text-center">
+        <div className="content text-center" data-aos="fade-up">
           <h1 className="display-4 mb-4">Our Mission</h1>
           <p className="lead">
             Our website aims to make education accessible and empowering,
@@ -30,10 +38,14 @@ const About = () => {
         </div>
       </div>
 
+      {/* Content Section */}
       <div className="container content-section">
         <div className="row">
-          {/* <!-- Image Column --> */}
-          <div className="col-md-6 image-column">
+          {/* Image Column */}
+          <div
+            className="col-md-6 image-column"
+            data-aos="fade-right" // AOS animation effect
+          >
             <img
               src="https://cdn.pixabay.com/photo/2016/11/20/09/08/books-1842306_960_720.jpg"
               className="img-fluid"
@@ -41,8 +53,8 @@ const About = () => {
             />
           </div>
 
-          {/* <!-- Content Column --> */}
-          <div className="col-md-6">
+          {/* Content Column */}
+          <div className="col-md-6" data-aos="fade-left"> {/* AOS animation */}
             <br />
             <br /> <br />
             <div>
@@ -99,13 +111,33 @@ const About = () => {
         </div>
       </div>
 
-     
-        {/* Our Mission Section */}
-
-        {/* Our Services Section */}
-      
-      <br />
-      <br />
+      {/* Mission Section */}
+      <div className="container">
+        <div className="container my-5">
+          <div className="row mission-section align-items-center" data-aos="zoom-in">
+            <div className="col-md-6">
+              <div className="mission-content">
+                <div className="d-flex align-items-center mb-3">
+                  <i className="bi bi-activity"></i>
+                  <h2 className="ms-2 mission-heading">Our Mission of Cultivating Creativity!!</h2>
+                </div>
+                <p className="mission-text">
+                  Empowering creativity by fostering an environment where bold ideas thrive and transformative solutions are born.
+                  Nurturing talent to drive meaningful progress and success.
+                </p>
+                {/* <button className="custom-btn mt-3">Learn More</button> */}
+              </div>
+            </div>
+            <div className="col-md-6 mission-image text-center">
+              <img
+                src="https://cdn.pixabay.com/photo/2018/09/17/12/46/business-idea-3683781_1280.jpg"
+                alt="Mission Image"
+                className="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
