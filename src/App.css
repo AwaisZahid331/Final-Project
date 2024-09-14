@@ -58,12 +58,17 @@
 
 nav {
   /* box-shadow: 1px 2px 5px #05004e; */
-  font-family:   "Ramaraja", serif;
+  font-family: "Ramaraja", serif;
   font-weight: 400;
   font-style: normal;
   font-weight: bold;
 }
-
+h1, h2, h3, p{
+  font-family: "Ramaraja", serif;
+  /* font-weight: 4
+  00; */
+  font-style: normal;
+}
 @media screen and (max-width: 498px) {
   .text-light {
     font-size: 11px;
@@ -93,14 +98,14 @@ nav {
   height: 300px;
   /* color: white; */
   border-radius: 15px 15px;
-    font-family: "Ramaraja", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Ramaraja", serif;
+  font-weight: 400;
+  font-style: normal;
   align-items: center;
   font-size: 1.1rem;
 }
 .bg {
-  background: linear-gradient(to right, #05004e 0%, black 100%);
+  /* background: linear-gradient(to right, #05004e 0%, black 100%); */
   /* background-image: url('/F_Y_Project-main/public/im.jpg'); */
   color: white;
 }
@@ -155,8 +160,6 @@ p {
 .lead {
   font-weight: 400;
 }
-
-
 
 @keyframes slidein {
   from {
@@ -246,7 +249,7 @@ p {
   }
 }
 .container-fluid {
-  font-family:   "Ramaraja", serif;
+  font-family: "Ramaraja", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.1rem;
@@ -512,9 +515,6 @@ p {
   text-align: center;
 }
 
-
-
-
 /* ------------------------------ */
 .form {
   display: flex;
@@ -559,9 +559,6 @@ p {
   box-sizing: border-box;
 }
 
-
-
-
 /* //////////////// */
 .field {
   display: flex;
@@ -597,7 +594,7 @@ p {
   justify-content: center;
   flex-direction: row;
   /* margin-top: 2.8em; */
-  width:5rem;
+  width: 5rem;
 }
 
 .button1 {
@@ -1033,7 +1030,7 @@ p {
 
 .child:hover > .button {
   transform: translate3d(0px, 20px, 30px) perspective(80px) rotateX(-60deg)
-  translateY(2px) translateZ(10px);
+    translateY(2px) translateZ(10px);
 }
 
 /* for footer */
@@ -1064,12 +1061,6 @@ p {
 
 /* General Styles for the Form */
 
-
-
-
-
-
-
 body {
   background-color: rgb(25, 26, 26);
 }
@@ -1082,8 +1073,6 @@ body {
   color: #fff;
   padding: 20px;
 }
-
-
 
 /* for about page */
 
@@ -1099,7 +1088,7 @@ body {
   align-items: center; /* Aligns the items vertically centered */
   margin-bottom: 20px; /* Adds space below the contact info section */
 }
-.para{
+.para {
   width: 150px;
 }
 .contact-info img {
@@ -1171,14 +1160,13 @@ body {
 
 .input {
   width: 100%;
-  padding: 10px; 
+  padding: 10px;
   /* background-color: #343a40;  */
   border-radius: 4px;
   /* color: white;  */
   font-size: 16px;
   border: 1px solid white;
 }
-
 
 .input:focus {
   border-color: white;
@@ -1202,7 +1190,6 @@ body {
   box-shadow: rgb(255, 140, 0);
 }
 
-
 .map {
   display: flex;
   justify-content: center; /* Center iframe horizontally within the map container */
@@ -1217,15 +1204,10 @@ body {
   height: 450px;
   border-radius: 10px; /* Set a fixed height for the iframe */
 }
-.working-hours{
+.working-hours {
   /* color: rgb(255, 140, 0); */
   font-size: 2rem;
 }
-
-
-
-
-
 
 .content-section {
   padding: 2rem 0;
@@ -1247,7 +1229,7 @@ body {
 }
 
 .content-section ul li::before {
-  content: '✔';
+  content: "✔";
   position: absolute;
   left: 0;
   top: 0;
@@ -1258,20 +1240,12 @@ body {
   display: flex;
   align-items: center;
 }
-.image-column img{
+.image-column img {
   height: 800px;
   width: 900px;
 }
 
-
-
-
-
-
-
-
 /* This is for uploaded page */
-
 
 /* Full-width container */
 /* Full-width container */
@@ -1395,8 +1369,7 @@ body {
   color: #6c757d;
 }
 /* This is for about page and for cards */
-/* From Uiverse.io by gharsh11032000 */ 
-
+/* From Uiverse.io by gharsh11032000 */
 
 .mission-section {
   background: linear-gradient(90deg, #ffffff 0%, #635921 100%);
@@ -1409,7 +1382,7 @@ body {
 }
 
 .custom-btn {
-  background-color: #4A66F5;
+  background-color: #4a66f5;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -1420,7 +1393,7 @@ body {
 .mission-heading {
   font-weight: bold;
   font-size: 24px;
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 .mission-text {
@@ -1428,23 +1401,12 @@ body {
   font-size: 16px;
 }
 
-.bi-activity{
+.bi-activity {
   color: #000;
- font-size: 34px;
+  font-size: 34px;
 }
 
-
-
-
-
-
-
-
 /* THis is for loader */
-
-
-
-
 
 /* App.css */
 
@@ -1481,9 +1443,6 @@ body {
   font-style: normal;
 } */
 
-
-
-
 /* for home page styyling  */
 /* Fade-in effect */
 .fade-in {
@@ -1510,7 +1469,6 @@ body {
 }
 
 /* Button pulse effect */
-
 
 @keyframes pulse {
   0% {
@@ -1592,7 +1550,10 @@ body {
   }
 }
 
-
-
-
 /* this is for starting ::-webkit-validation-bubble-message */
+
+
+
+.testimonial-card{
+  border-radius: 10px 33px 44px;
+}

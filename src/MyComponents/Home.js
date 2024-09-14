@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "../App.css"; // Assuming you have custom styles here
+import "../App.css";
 import { NavLink } from "react-router-dom";
-import Loader from "./loader"; // Import the loader component
+import Loader from "./loader"; 
 
 const Home = () => {
-  const [loading, setLoading] = useState(true); // State to manage loader visibility
+  const [loading, setLoading] = useState(true);
   const [greeting, setGreeting] = useState("");
+  const [currentTestimonial, setCurrentTestimonial] = useState(0); 
 
+  
   useEffect(() => {
     const hasSeenLoader = localStorage.getItem("hasSeenLoader");
 
@@ -16,7 +18,7 @@ const Home = () => {
       const timer = setTimeout(() => {
         setLoading(false);
         localStorage.setItem("hasSeenLoader", "true");
-      }, 1500);
+      }, 2500);
 
       return () => clearTimeout(timer);
     }
@@ -31,13 +33,43 @@ const Home = () => {
       setGreeting("Good Morning! Start your day with the best study tips.");
     } else if (hour >= 13 && hour < 18) {
       setGreeting("Good Afternoon! Keep up the good work.");
-    } else if (hour >= 19 && hour <= 23) {
-      setGreeting("Good Evening! Take a break and refresh yourself.");
     } else {
       setGreeting("Good Evening! Take a break and refresh yourself.");
     }
   }, []);
 
+  // Testimonials
+  const testimonials = [
+    {
+      text: "This university has provided me with the best learning experience. The faculty and resources are outstanding!",
+      author: "Student 1",
+    },
+    {
+      text: "The diverse student community and opportunities for personal growth have made my time here unforgettable.",
+      author: "Student 2",
+    },
+    {
+      text: "The facilities and academic support at this university have helped me achieve my career goals.",
+      author: "Student 3",
+    },
+    {
+      text: "A wonderful learning environment that fosters growth and creativity.",
+      author: "Student 4",
+    },
+  ];
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prevTestimonial) =>
+        prevTestimonial === testimonials.length - 1 ? 0 : prevTestimonial + 1
+      );
+    }, 3000); // Change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  // If loading, display the loader
   if (loading) {
     return <Loader />;
   }
@@ -47,23 +79,23 @@ const Home = () => {
       <br />
       <div className="black-background fade-in">
         <div className="container">
-          <h2 className=" hloo">{greeting}</h2>
+          <h2 className="hloo">{greeting}</h2>
         </div>
 
         <div className="container text-white mt-4 slide-up">
           <div className="row align-items-center">
             {/* Image on the left with zoom effect */}
             <div className="col-md-6 text-center mb-4">
-              <div className="shadow-background">
+              <div className="shadow-background zoom-in-out">
                 <img
                   src="https://media.gettyimages.com/id/1426606515/video/library-background-learning-books-and-studying-at-school-university-and-college-for-exam-test.jpg?s=480x480&k=20&c=xt-UdIJSoNWWbN-o1LsvegZbGWQWFDN1zl0wMU_X49E="
                   alt="University Resources"
-                  className="img-fluid rounded main-image zoom-effect"
+                  className="img-fluid rounded main-image"
                 />
               </div>
             </div>
             {/* Text on the right with fade-in effect */}
-            <div className="col-md-6 fade-in">
+            <div className="col-md-6 text-section fade-in-text">
               <h2 className="text-center hlo glow-text">
                 Boost Your Studies with{" "}
                 <span style={{ color: "rgb(255,140,0)" }}>
@@ -149,28 +181,14 @@ const Home = () => {
             Hear directly from our students about their experiences and journeys
             at our university.
           </p>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="card testimonial-card zoom-effect">
-                <div className="card-body">
-                  <p>
-                    This university has provided me with the best learning
-                    experience. The faculty and resources are outstanding!
-                  </p>
-                  <p className="testimonial-author">Student</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="card testimonial-card zoom-effect">
-                <div className="card-body">
-                  <p>
-                    The diverse student community and opportunities for personal
-                    growth have made my time here unforgettable.
-                  </p>
-                  <p className="testimonial-author">Student</p>
-                </div>
-              </div>
+          <div className="testimonial-content">
+            <div className="testimonial-card">
+              <p className="testimonial-text">
+                {testimonials[currentTestimonial].text}
+              </p>
+              <p className="testimonial-author">
+                {testimonials[currentTestimonial].author}
+              </p>
             </div>
           </div>
         </div>
