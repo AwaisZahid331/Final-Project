@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const About = () => {
-  
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
   }, []);
@@ -37,8 +36,8 @@ const About = () => {
           </p>
         </div>
       </div>
-
       {/* Content Section */}
+      
       <div className="container content-section">
         <div className="row">
           {/* Image Column */}
@@ -54,7 +53,9 @@ const About = () => {
           </div>
 
           {/* Content Column */}
-          <div className="col-md-6" data-aos="fade-left"> {/* AOS animation */}
+          <div className="col-md-6" data-aos="fade-left">
+            {" "}
+            {/* AOS animation */}
             <br />
             <br /> <br />
             <div>
@@ -114,16 +115,22 @@ const About = () => {
       {/* Mission Section */}
       <div className="container">
         <div className="container my-5">
-          <div className="row mission-section align-items-center" data-aos="zoom-in">
+          <div
+            className="row mission-section align-items-center"
+            data-aos="zoom-in"
+          >
             <div className="col-md-6">
               <div className="mission-content">
                 <div className="d-flex align-items-center mb-3">
                   <i className="bi bi-activity"></i>
-                  <h2 className="ms-2 mission-heading">Our Mission of Cultivating Creativity!!</h2>
+                  <h2 className="ms-2 mission-heading">
+                    Our Mission of Cultivating Creativity!!
+                  </h2>
                 </div>
                 <p className="mission-text">
-                  Empowering creativity by fostering an environment where bold ideas thrive and transformative solutions are born.
-                  Nurturing talent to drive meaningful progress and success.
+                  Empowering creativity by fostering an environment where bold
+                  ideas thrive and transformative solutions are born. Nurturing
+                  talent to drive meaningful progress and success.
                 </p>
                 {/* <button className="custom-btn mt-3">Learn More</button> */}
               </div>

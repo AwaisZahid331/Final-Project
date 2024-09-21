@@ -41,20 +41,7 @@
 /* styles.css */
 
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;600&family=Poppins:ital,wght@0,200;1,300&display=swap");
-.custom-button {
-  /* Add your styling here */
-  padding: 10px 20px;
-  border-radius: 3px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 4px;
-  cursor: pointer;
-}
+
 
 nav {
   /* box-shadow: 1px 2px 5px #05004e; */
@@ -104,11 +91,7 @@ h1, h2, h3, p{
   align-items: center;
   font-size: 1.1rem;
 }
-.bg {
-  /* background: linear-gradient(to right, #05004e 0%, black 100%); */
-  /* background-image: url('/F_Y_Project-main/public/im.jpg'); */
-  color: white;
-}
+
 
 /* Responsive styles */
 .video-bg-container {
@@ -125,7 +108,7 @@ h1, h2, h3, p{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* Lower opacity for the video */
+  /* opacity: 0.3; Lower opacity for the video */
   z-index: -1;
 }
 
@@ -140,7 +123,7 @@ h1, h2, h3, p{
   align-items: center;
   transform: translateY(-60px);
   /* opacity: 0.9; */
-  height: 100%;
+  height: 80%;
 }
 
 h1 {
@@ -157,9 +140,8 @@ p {
   margin: 10px auto;
 }
 
-.lead {
-  font-weight: 400;
-}
+
+
 
 @keyframes slidein {
   from {
@@ -346,20 +328,9 @@ p {
   z-index: 1000; /* Adjust the z-index value as needed */
 }
 
-.btn-custom {
-  background-color: #4caf50; /* Green background */
-  color: white; /* White text */
-  font-weight: bold; /* Bold text */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease; /* Smooth transition */
-  width: 20%; /* Set the width to 100% to occupy equal space */
-  height: 40px; /* Set a fixed height for all buttons */
-  margin-bottom: 10px; /* Add some space between buttons */
-}
 
-.btn-custom:hover {
-  transform: scale(1.05); /* Increase button size on hover */
-}
+
+
 
 .divider {
   border-top: 2px solid #4caf50; /* Green border */
@@ -1062,7 +1033,7 @@ p {
 /* General Styles for the Form */
 
 body {
-  background-color: rgb(25, 26, 26);
+  background-color: #05004e;
 }
 
 /* Animated Gradient Background */
@@ -1556,4 +1527,377 @@ body {
 
 .testimonial-card{
   border-radius: 10px 33px 44px;
+}
+
+
+
+/* This is for past paper page */
+
+/* Fullscreen video styling */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: fadeInVideo 2s ease-in-out;
+}
+
+/* Text overlay on video */
+.overlay-text {
+  height: 24rem;
+  width: 80rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.overlay-heading {
+  font-size: 3rem;
+  color: #ff8c00;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards; /* Delay by 1s */
+}
+
+.overlay-subheading {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 2s 1.5s forwards; /* Delay by 1.5s */
+}
+
+.overlay-description {
+  font-size: 18px;
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  opacity: 0;
+  animation: fadeIn 2s 2s forwards; /* Delay by 2s */
+}
+
+/* Department Button Styling with Animation */
+.btn-custom {
+  background-color: rgb(255, 140, 0);
+  color: white;
+  width: 390px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: slideUp 1s forwards ease-in-out;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05); 
+  background-color: #05004e;
+  color: white; 
+  box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
+}
+
+
+.animate-button:nth-child(1) { animation-delay: 2.5s; }
+.animate-button:nth-child(2) { animation-delay: 2.6s; }
+.animate-button:nth-child(3) { animation-delay: 2.7s; }
+.animate-button:nth-child(4) { animation-delay: 2.8s; }
+.animate-button:nth-child(5) { animation-delay: 2.9s; }
+.animate-button:nth-child(6) { animation-delay: 3s; }
+
+/* Heading Animation */
+.heading {
+  /* font-size: 2.5rem; */
+  /* font-weight: 700; */
+  margin-bottom: 20px;
+  color: #ffffff;
+  /* opacity: 0; */
+  animation: fadeInTitle 2s forwards 2.5s;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 2s 3s forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInVideo {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/* Wave Style */
+/* Left Wave Animation */
+.wave-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Set width to 200% for smooth transition */
+  z-index: 1;
+  animation: waveLeftAnimation 10s linear infinite;
+}
+
+/* Right Wave Animation */
+/* Left Wave Animation */
+.wave-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Set width to 200% for smooth transition */
+  z-index: 1;
+  animation: waveLeftAnimation 10s linear infinite;
+}
+
+/* Right Wave Animation */
+.wave-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200%; /* Set width to 200% for smooth transition */
+  z-index: 1;
+  animation: waveRightAnimation 10s linear infinite;
+}
+
+/* Wave Left Animation */
+@keyframes waveLeftAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes waveRightAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+
+}
+.overlay-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Video Styling */
+.video-container {
+  position: relative;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+
+.progress-tracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.milestone {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.milestone:hover{
+  box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0);
+}
+.milestone span {
+  font-size: 20px;
+  background-color: rgb(255, 140, 0);
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+}
+
+
+.milestone.completed {
+  background-color: green;
+  /* color: white; */
+}
+
+.milestone.selected {
+  background-color: orange;
+  color: white;
+  transform: scale(1.2);
+}
+
+.milestone:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 140, 0);
+  color: white;
+}
+
+.progress-tracker::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: rgb(255, 140, 0);
+  z-index: 0;
+}
+
+.milestone.completed::before {
+  background-color: green;
+}
+
+
+.btn-pri{
+  background-color: rgb(255, 140, 0);
+  color: white;
+  /* width: 390px; */
+  font-weight: bold;
+  padding: 10px 20px;
+  /* border: none; */
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  /* opacity: 0; */
+  /* animation: slideUp 1s forwards ease-in-out; */
+}
+.btn-pri:hover {
+  transform: scale(1.05); 
+  background-color: #05004e;
+  color: white; 
+  box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
+}
+
+
+.img-fluid{
+  border-radius: 10px;
+  box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
+}
+
+
+
+/* From Uiverse.io by adamgiebl */ 
+.unique-button {
+  /* display: flex; */
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  /* width: 250px; */
+  font-size: 17px;
+  /* padding: 0.8em 1.3em 0.8em 0.9em; */
+  color: white;
+  background: #ad5389; /* Change as desired */
+  background: linear-gradient(to right, rgb(236, 154, 54), #302b63, rgb(231, 158, 68));
+  border: none;
+  /* letter-spacing: 0.05em; */
+  border-radius: 16px;
+  transition: transform 0.3s ease; /* Add a transition for hover effect */
+}
+.unique-button:hover{
+
+  box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 15px rgb(255, 140, 0); /* Glow effect */
+}
+
+.unique-button svg {
+  margin-right: 5px; 
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg); /* Initial state */
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.unique-button:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.unique-button:hover svg {
+  transform: translateX(5px) rotate(90deg); /* Rotate and move on hover */
+}
+
+.unique-button:hover span {
+  transform: translateX(7px); /* Add span animation if used */
 }

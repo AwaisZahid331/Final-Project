@@ -132,7 +132,7 @@ const Home = () => {
         <br />
 
         <div className="container text-center py-5 slide-up">
-          <h2 className="mb-5 fade-in">How It Works</h2>
+          <h1 className="mb-5 fade-in">How It Works</h1>
           <div className="row">
             <div className="col-md-3 zoom-on-hover">
               <div className="icon-container">
@@ -176,7 +176,7 @@ const Home = () => {
 
       <section className="testimonial-section text-center fade-in">
         <div className="container">
-          <h2 className="mb-4">What Our Students Are Saying</h2>
+          <h1 className="mb-4">What Our Students Are Saying</h1>
           <p className="mb-5">
             Hear directly from our students about their experiences and journeys
             at our university.

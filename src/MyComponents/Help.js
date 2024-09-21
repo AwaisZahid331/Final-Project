@@ -7,23 +7,23 @@ const Help = () => {
     if (typeof window !== 'undefined') {
       const AOS = require('aos');
       AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        easing: 'ease-in-out', // Easing animation
-        once: true, // Whether animation should happen only once
+        duration: 1000, 
+        easing: 'ease-in-out', 
+        once: true, 
       });
     }
   }, []);
 
   return (
     <>
-    <br />
+    
       {/* Section: FAQ */}
       <br />
-      <div className="container-fluid" style={{ backgroundColor: "rgb(25, 26, 26)", color: "white" }}>
+      <div className="container-fluid" style={{ backgroundColor: "#05004e", color: "white" }}>
         <section className='p-4'>
           <h3 className="text-center mb-4 pb-2 text-primary fw-bold" data-aos="zoom-in">FAQ</h3>
           <p className="text-center mb-5" data-aos="fade-up">
-            <strong>Find the answers for the most frequently asked questions below</strong>
+            <strong style={{color:"orange"}}>Find the answers for the most frequently asked questions below</strong>
           </p>
 
           <div className="row">
