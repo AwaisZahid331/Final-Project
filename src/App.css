@@ -42,7 +42,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;600&family=Poppins:ital,wght@0,200;1,300&display=swap");
 
-
 nav {
   /* box-shadow: 1px 2px 5px #05004e; */
   font-family: "Ramaraja", serif;
@@ -50,7 +49,10 @@ nav {
   font-style: normal;
   font-weight: bold;
 }
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
   font-family: "Ramaraja", serif;
   /* font-weight: 4
   00; */
@@ -91,7 +93,6 @@ h1, h2, h3, p{
   align-items: center;
   font-size: 1.1rem;
 }
-
 
 /* Responsive styles */
 .video-bg-container {
@@ -139,9 +140,6 @@ p {
   max-width: 900px;
   margin: 10px auto;
 }
-
-
-
 
 @keyframes slidein {
   from {
@@ -327,10 +325,6 @@ p {
 .navbar {
   z-index: 1000; /* Adjust the z-index value as needed */
 }
-
-
-
-
 
 .divider {
   border-top: 2px solid #4caf50; /* Green border */
@@ -1523,13 +1517,9 @@ body {
 
 /* this is for starting ::-webkit-validation-bubble-message */
 
-
-
-.testimonial-card{
+.testimonial-card {
   border-radius: 10px 33px 44px;
 }
-
-
 
 /* This is for past paper page */
 
@@ -1602,25 +1592,37 @@ body {
   padding: 10px 20px;
   border: none;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
   opacity: 0;
   animation: slideUp 1s forwards ease-in-out;
 }
 
 .btn-custom:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   background-color: #05004e;
-  color: white; 
+  color: white;
   box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
 }
 
-
-.animate-button:nth-child(1) { animation-delay: 2.5s; }
-.animate-button:nth-child(2) { animation-delay: 2.6s; }
-.animate-button:nth-child(3) { animation-delay: 2.7s; }
-.animate-button:nth-child(4) { animation-delay: 2.8s; }
-.animate-button:nth-child(5) { animation-delay: 2.9s; }
-.animate-button:nth-child(6) { animation-delay: 3s; }
+.animate-button:nth-child(1) {
+  animation-delay: 2.5s;
+}
+.animate-button:nth-child(2) {
+  animation-delay: 2.6s;
+}
+.animate-button:nth-child(3) {
+  animation-delay: 2.7s;
+}
+.animate-button:nth-child(4) {
+  animation-delay: 2.8s;
+}
+.animate-button:nth-child(5) {
+  animation-delay: 2.9s;
+}
+.animate-button:nth-child(6) {
+  animation-delay: 3s;
+}
 
 /* Heading Animation */
 .heading {
@@ -1645,48 +1647,43 @@ body {
 /* Animations */
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes slideUp {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInVideo {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes fadeInTitle {
   0% {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-
-
-
-
 
 /* Wave Style */
 /* Left Wave Animation */
@@ -1730,7 +1727,6 @@ body {
   }
 }
 
-
 @keyframes waveRightAnimation {
   0% {
     transform: translateX(0);
@@ -1738,7 +1734,6 @@ body {
   100% {
     transform: translateX(50%);
   }
-
 }
 .overlay-text {
   position: relative;
@@ -1756,9 +1751,6 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
-
-
 
 .progress-tracker {
   display: flex;
@@ -1783,8 +1775,29 @@ body {
   font-weight: bold;
 }
 
-.milestone:hover{
+.milestone:hover {
   box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0);
+  transform: scale(1.1);
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.completed {
+  background-color: rgb(0, 255, 0); /* color for completed milestones */
+}
+
+.selected {
+  border: 2px solid rgb(0, 0, 255); /* border for selected milestone */
 }
 .milestone span {
   font-size: 20px;
@@ -1797,7 +1810,6 @@ body {
   display: flex;
   border-radius: 50%;
 }
-
 
 .milestone.completed {
   background-color: green;
@@ -1817,7 +1829,7 @@ body {
 }
 
 .progress-tracker::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -1831,8 +1843,7 @@ body {
   background-color: green;
 }
 
-
-.btn-pri{
+.btn-pri {
   background-color: rgb(255, 140, 0);
   color: white;
   /* width: 390px; */
@@ -1840,26 +1851,39 @@ body {
   padding: 10px 20px;
   /* border: none; */
   font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
   /* opacity: 0; */
   /* animation: slideUp 1s forwards ease-in-out; */
 }
 .btn-pri:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   background-color: #05004e;
-  color: white; 
+  color: white;
   box-shadow: 0 0 15px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
 }
 
-
-.img-fluid{
+.img-fluid {
   border-radius: 10px;
+  height: 350px;
+  width: 440px;
   box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
 }
+.img-fluid {
+  animation: scaleAnimation 5s infinite; /* Animation with duration and infinite loop */
+}
 
+@keyframes scaleAnimation {
+  0%,
+  100% {
+    transform: scale(0.9); /* Original size */
+  }
+  50% {
+    transform: scale(1); /* Scale up to 110% */
+  }
+}
 
-
-/* From Uiverse.io by adamgiebl */ 
+/* From Uiverse.io by adamgiebl */
 .unique-button {
   /* display: flex; */
   align-items: center;
@@ -1871,19 +1895,23 @@ body {
   /* padding: 0.8em 1.3em 0.8em 0.9em; */
   color: white;
   background: #ad5389; /* Change as desired */
-  background: linear-gradient(to right, rgb(236, 154, 54), #302b63, rgb(231, 158, 68));
+  background: linear-gradient(
+    to right,
+    rgb(236, 154, 54),
+    #302b63,
+    rgb(231, 158, 68)
+  );
   border: none;
   /* letter-spacing: 0.05em; */
   border-radius: 16px;
   transition: transform 0.3s ease; /* Add a transition for hover effect */
 }
-.unique-button:hover{
-
+.unique-button:hover {
   box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 15px rgb(255, 140, 0); /* Glow effect */
 }
 
 .unique-button svg {
-  margin-right: 5px; 
+  margin-right: 5px;
   justify-content: center;
   align-items: center;
   transform: rotate(0deg); /* Initial state */

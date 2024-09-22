@@ -24,10 +24,10 @@ const PastPapers = () => {
         <div className="overlay-text animate-overlay">
           <h1 className="overlay-heading animate-heading">
             Welcome to the Department Resources Hub
-          </h1>
+          </h1> <br />
           <p className="overlay-subheading animate-subheading">
             Explore past papers from various departments below
-          </p>
+          </p> 
           <p className="overlay-description animate-description">
             Download resources from a variety of departments. This platform
             offers quick, easy access to past papers to help you prepare for

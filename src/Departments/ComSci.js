@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import './ComSci.css';
 
+
+
+
+ 
 const ComSci = () => {
   const [currentSemester, setCurrentSemester] = useState(0);
   const [selectedSemester, setSelectedSemester] = useState(null); 
@@ -12,11 +16,13 @@ const ComSci = () => {
     setSelectedSemester(semester); 
     setCurrentSemester(semester); 
 
-    // Wait for 2 seconds before navigating
+    // Wait for 2 seconds 
     setTimeout(() => {
       navigate(route); 
     }, 1000);
   };
+  
+  
 
   return (
     <>
