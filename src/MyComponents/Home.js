@@ -77,6 +77,7 @@ const Home = () => {
   return (
     <>
       <br />
+    
       <div className="black-background fade-in">
         <div className="container">
           <h2 className="hloo">{greeting}</h2>

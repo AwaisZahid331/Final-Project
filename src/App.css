@@ -1493,8 +1493,8 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
-  animation: textAnimation 4s infinite;
-  border-radius: 12px 33px 42px 44px;
+  animation: textAnimation 5s infinite;
+  border-radius: 10px ;
 }
 
 @keyframes textAnimation {
@@ -1928,4 +1928,76 @@ body {
 
 .unique-button:hover span {
   transform: translateX(7px); /* Add span animation if used */
+}
+
+
+
+/* Styling for logo */
+.logo {
+  margin-left: 20px; /* Add space between logo and search bar */
+  cursor: pointer;
+}
+
+.logo img {
+  height: 34px;
+  width: 123px;
+  display: block; /* Ensures the image is treated as a block-level element */
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn-outline{
+  background-color: orange;
+  color: white;
+  /* border: none; */
+  /* padding: 10px 20px; */
+  /* border-radius: 4px; */
+  cursor: pointer;
+  
+  
+}
+
+.search iinput{
+  width: 33rem;
+}
+/* From Uiverse.io by tiagoadag1203 */ 
+.iinput {
+  max-width: 13rem;
+  /* background-color: rgb(255, 140, 0); */
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+}
+
+.input:focus {
+  animation: rotateShadow 2s infinite linear;
+}
+
+@keyframes rotateShadow {
+  0% {
+    box-shadow: -2px -2px 8px 1px #ffd000, 2px 2px 8px 1px #3700ff;
+  }
+  25% {
+    box-shadow: -2px 2px 8px 1px #aa00ff, 2px -2px 8px 1px #3700ff;
+  }
+  50% {
+    box-shadow: 2px 2px 8px 1px #aa00ff, -2px -2px 8px 1px #3700ff;
+  }
+  75% {
+    box-shadow: 2px -2px 8px 1px #aa00ff, -2px 2px 8px 1px #3700ff;
+  }
+  100% {
+    box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;
+  }
 }
