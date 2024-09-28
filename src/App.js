@@ -144,27 +144,14 @@ import Us6 from "./Urdu_Semesters/Us6";
 import Us7 from "./Urdu_Semesters/Us7";
 import Us8 from "./Urdu_Semesters/Us8";
 
+import Check from "./MyComponents/Check";
+
 function App() {
-  // const [showSignup, setShowSignup] = useState(false);
-  // const [showLogin, setShowLogin] = useState(false);
-  // const [popup, setPopup] = useState('');
-
-  // const handleSignupClick = () => {
-  //   setShowSignup(true);
-  //   setShowLogin(false);
-  // };
-
-  // const handleLoginClick = () => {
-  //   setShowLogin(true);
-  //   setShowSignup(false);
-  // };
   return (
     <>
-      <br />
-      {/* <UploadForm/> */}
-      {/* <UploadedPDF/> */}
+      
       <Router>
-        <Navbar />
+       <Navbar/> 
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -174,12 +161,13 @@ function App() {
           <Route path="/uploadedPDF" element={<UploadedPDF />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+         <Route path="/check" element={<Check/>}/>
 
           {/* <Route path="/signup" element={<Signup />} /> */}
 
           <Route path="/ComSci" element={<ComSci />} />
           <Route path="/bba" element={<Bba />} />
-          <Route path="/bio" element={<Bio />} /> 
+          <Route path="/bio" element={<Bio />} />
           <Route path="/botnay" element={<Botnay />} />
           <Route path="/chemistry" element={<Chemistry />} />
           <Route path="/ecnomics" element={<Ecnomics />} />
@@ -307,6 +295,8 @@ function App() {
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
+
+        <br />
       </Router>
     </>
   );

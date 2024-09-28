@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <> 
       <header>
         <div className="logo">
           <img
@@ -118,6 +118,16 @@ const Navbar = () => {
                   activeClassName="active"
                 >
                   Resources
+                </NavLink>
+              </li>
+              <br />
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/check"
+                  activeClassName="active"
+                >
+                  Resume Building
                 </NavLink>
               </li>
             </ul>
