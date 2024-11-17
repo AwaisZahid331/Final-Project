@@ -130,7 +130,7 @@ p {
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); */
 }
 
 p {
@@ -263,12 +263,11 @@ p {
   }
 }
 
-.container {
-  width: 100%;
-  max-width: 960px; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Adjustments for smaller screens */
@@ -705,7 +704,7 @@ p {
 
 /* Full page black background */
 .black-background {
-  background-color: #05004e;
+  background-color: #002244;
   color: white; /* Ensures text is white for readability */
   min-height: 100vh; /* Ensures the background covers the full viewport height */
   padding: 20px 0; /* Adds some vertical spacing */
@@ -998,10 +997,10 @@ p {
     translateY(2px) translateZ(10px);
 }
 
-/* for footer */
+/* for footer
 .container {
   padding: 0 15px;
-}
+} */
 
 .bg-dark {
   background-color: #343a40;
@@ -1867,7 +1866,7 @@ body {
   border-radius: 10px;
   height: 350px;
   width: 440px;
-  box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); /* Glow effect */
+  /* box-shadow: 0 0 0px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0); Glow effect */
 }
 .img-fluid {
   animation: scaleAnimation 5s infinite; /* Animation with duration and infinite loop */
@@ -1933,16 +1932,16 @@ body {
 
 
 /* Styling for logo */
-.logo {
-  margin-left: 20px; /* Add space between logo and search bar */
+/* .logo {
+  margin-left: 20px; 
   cursor: pointer;
 }
 
 .logo img {
   height: 34px;
   width: 123px;
-  display: block; /* Ensures the image is treated as a block-level element */
-}
+  display: block; 
+} */
 
 .search{
   display: flex;
@@ -1950,21 +1949,7 @@ body {
   align-items: center;
 }
 
-header{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.btn-outline{
-  background-color: orange;
-  color: white;
-  /* border: none; */
-  /* padding: 10px 20px; */
-  /* border-radius: 4px; */
-  cursor: pointer;
-  
-  
-}
+
 
 .search iinput{
   width: 33rem;
@@ -2000,4 +1985,144 @@ header{
   100% {
     box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;
   }
+}
+
+
+
+/* This is just for resume building */
+.m-auto{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.gear{
+  /* background-color: #0056b3; */
+  /* height: 34px; */
+  font-size: 37px;
+  color: white;
+  margin: -2px 14px;
+}
+
+.ger{
+  height: 34px;
+}
+
+
+
+
+.btn-2{
+  margin-left: 16px;
+}
+.btn-3{
+  margin-left: 16px;
+}
+.btn-4{
+  margin-left: 16px;
+}
+.btn-1{
+  margin-left: 16px;
+}
+
+
+
+
+
+/* Remove margin/padding between sections */
+.section-2 {
+  padding: 50px 0;
+  margin-top: 0;  /* Remove any extra space */
+  background-color: #002244;
+  color: white;
+}
+
+/* Optionally, set a smooth transition between the video and the departments section */
+.section-2:before {
+  content: '';
+  display: block;
+  height: 10px;
+  background-color: #05004e;
+  margin-top: 0;
+}
+
+
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002244;
+  /* padding: 20px; */
+  height: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for footer */
+.footer {
+  background-color: #132b50;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-underline {
+  border: 0;
+  border-top: 1px solid red;
+  width: 50%;
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
 }

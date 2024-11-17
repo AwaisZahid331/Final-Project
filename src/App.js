@@ -144,7 +144,7 @@ import Us6 from "./Urdu_Semesters/Us6";
 import Us7 from "./Urdu_Semesters/Us7";
 import Us8 from "./Urdu_Semesters/Us8";
 
-import Check from "./MyComponents/Check";
+
 
 function App() {
   return (
@@ -161,7 +161,7 @@ function App() {
           <Route path="/uploadedPDF" element={<UploadedPDF />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-         <Route path="/check" element={<Check/>}/>
+      
 
           {/* <Route path="/signup" element={<Signup />} /> */}
 
@@ -296,7 +296,7 @@ function App() {
         </Routes>
         <Footer />
 
-        <br />
+      
       </Router>
     </>
   );

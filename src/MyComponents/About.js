@@ -10,8 +10,11 @@ const About = () => {
 
   return (
     <>
+  
+
+    
       {/* Video Background Section */}
-      <div className="video-bg-container">
+      <div className="video-bg-container" >
         <video autoPlay muted loop className="bg-video">
           <source
             src="https://cdn.pixabay.com/video/2020/09/08/49375-459436752_large.mp4"
@@ -20,7 +23,7 @@ const About = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="content text-center" data-aos="fade-up">
+        <div className="content text-center" data-aos="fade-up" >
           <h1 className="display-4 mb-4">Our Mission</h1>
           <p className="lead">
             Our website aims to make education accessible and empowering,
@@ -37,8 +40,8 @@ const About = () => {
         </div>
       </div>
       {/* Content Section */}
-      
-      <div className="container content-section">
+      <div className="section-1" style={{backgroundColor:"#05004e"}}>
+      <div className="container content-section" >
         <div className="row">
           {/* Image Column */}
           <div
@@ -59,7 +62,7 @@ const About = () => {
             <br />
             <br /> <br />
             <div>
-              <h3>How we do it?</h3>
+              <h1 style={{color:"rgb(255, 140, 0)", textAlign:"center"}}>How we do it?</h1>
               <p>
                 The Student Resource HUB provides easy access to educational
                 materials with secure authentication, efficient resource
@@ -95,8 +98,8 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className="mt-4">
-              <h3>Why we do it?</h3>
+            <div className="mt-4" >
+              <h3 style={{color:"rgb(255, 140, 0)"}}>Why we do it?</h3>
               <p>
                 Our mission is to make education accessible and empowering for
                 everyone. Our platform offers diverse resources and tools to
@@ -113,7 +116,7 @@ const About = () => {
       </div>
 
       {/* Mission Section */}
-      <div className="container">
+      <div className="container" >
         <div className="container my-5">
           <div
             className="row mission-section align-items-center"
@@ -144,6 +147,8 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+
       </div>
     </>
   );
