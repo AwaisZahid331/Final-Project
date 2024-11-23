@@ -26,7 +26,7 @@ const ComSci = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container-fluid mt-5" style={{backgroundColor:"#002244"}}>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
           Navigate through CS Semesters
         </h1>
@@ -45,7 +45,7 @@ const ComSci = () => {
           ))}
         </div>
         <hr />
-        <br />
+       
         <div className="row align-items-center">
           <div className="col-md-6 text-center">
             <div className="my-4">
@@ -211,8 +211,8 @@ const ComSci = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
+     
+     
     </>
   );
 };

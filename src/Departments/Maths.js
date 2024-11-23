@@ -23,7 +23,7 @@ const Maths = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container-fluid " style={{backgroundColor:"#002244"}}>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
           Navigate through Maths Semesters
         </h1>
@@ -42,7 +42,7 @@ const Maths = () => {
           ))}
         </div>
         <hr />
-        <br />
+        
         <div className="row align-items-center">
           <div className="col-md-6 text-center">
             <div className="my-4">
@@ -209,8 +209,7 @@ const Maths = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
+      
     </>
   );
 };

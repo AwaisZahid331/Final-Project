@@ -16,17 +16,45 @@ const Help = () => {
 
   return (
     <>
-    
+      <style>
+        {`
+          /* Custom Scrollbar for content section */
+          ::-webkit-scrollbar {
+            width: 10px;
+          }
+
+          ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background-color: orange;
+            border-radius: 10px;
+          }
+
+          ::-webkit-scrollbar-thumb:hover {
+            background-color: darkorange;
+          }
+
+          /* Apply this style to the content container to make it scrollable */
+          .scrollable-content {
+            max-height: 70vh; /* Set a max-height for content */
+            overflow-y: auto; /* Enable vertical scroll */
+            padding-right: 10px; /* Add some space for the scrollbar */
+          }
+        `}
+      </style>
+
       {/* Section: FAQ */}
-      <br />
+      
       <div className="container-fluid" style={{ backgroundColor: "#05004e", color: "white" }}>
-        <section className='p-4'>
+        <section className="p-4">
           <h3 className="text-center mb-4 pb-2 text-primary fw-bold" data-aos="zoom-in">FAQ</h3>
           <p className="text-center mb-5" data-aos="fade-up">
-            <strong style={{color:"orange"}}>Find the answers for the most frequently asked questions below</strong>
+            <strong style={{ color: "orange" }}>Find the answers for the most frequently asked questions below</strong>
           </p>
 
-          <div className="row">
+          <div className="row "> {/* Apply 'scrollable-content' class to this div */}
             <div className="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
               <h6 className="mb-3 text-primary"><i className="bi bi-patch-question"></i> How can I access study materials like past papers or slides?</h6>
               <p>

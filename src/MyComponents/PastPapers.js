@@ -43,7 +43,7 @@ const PastPapers = () => {
       </div>
 
       {/* Departments Section */}
-      <div className="section-2" style={{ backgroundColor: "#05004e" }}>
+      <div className="section-2" style={{ backgroundColor: "#002244" }}>
         <div className="container mt-5">
           <h1 className="text-center heading animate-title">Departments</h1>
           <hr className="divider animate-divider" />

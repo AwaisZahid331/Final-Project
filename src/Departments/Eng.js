@@ -26,9 +26,9 @@ const Eng = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container-fluid " style={{backgroundColor:"#002244"}}>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
-          Navigate through CS Semesters
+          Navigate through English Semesters
         </h1>
         <div className="progress-tracker">
           {/* Progress Milestones */}
@@ -45,7 +45,7 @@ const Eng = () => {
           ))}
         </div>
         <hr />
-        <br />
+       
         <div className="row align-items-center">
           <div className="col-md-6 text-center">
             <div className="my-4">
@@ -211,8 +211,7 @@ const Eng = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
+      
     </>
   );
 };
