@@ -2210,7 +2210,7 @@ h4 {
   --slant: 0.7em;   /* control the slanted corners */
   --color: #eeb310; /* the color */
   
-  font-size: 35px;
+  font-size: 25px;
   padding: 0.4em 1.2em;
   border: none;
   cursor: pointer;
@@ -2278,3 +2278,8 @@ h4 {
     transform: translateX(-99%);
   }
 }
+
+
+.cal:hover{
+  background-color: blue;
+  }

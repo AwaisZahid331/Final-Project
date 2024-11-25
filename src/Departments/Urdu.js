@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import './Urdu.css';
+import { Link } from "react-router-dom";
  
 const Urdu = () => {
   const [currentSemester, setCurrentSemester] = useState(0);
@@ -21,6 +22,11 @@ const Urdu = () => {
   return (
     <>
       <div className="container-fluid" style={{backgroundColor:"#002244"}}>
+      <strong>
+        <Link to="/uploadedPDF" style={{ textDecoration: "none", color: "orange" }}>
+          Back to uploads Page
+        </Link>
+      </strong>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
           Navigate through Urdu Semesters
         </h1>

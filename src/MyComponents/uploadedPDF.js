@@ -155,7 +155,7 @@ const UploadedPDF = () => {
         <div className="row justify-content-evenly g-0">
           {/* Card 1 */}
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
                 {" "}
                 <span
@@ -166,24 +166,30 @@ const UploadedPDF = () => {
                     marginTop: "45px",
                     color: "white",
                     fontWeight: "bold",
-                    // fontFamily:"san-serif"
-                    // fontFamily: "Bebas Neue",
+                    fontFamily: "italic"
                   }}
                 >
-                  Upload On CS Department
+                  Upload for CS Department
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title"> Upload for CS Department</h5> */}
                 <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur
+                  Share your study material Like PDF with the CS dept
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">  <Link
+                  to="/ComSci"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  C-S ✈
+                  {/* 🚀 */}
+
+                </Link></button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
                 <span
                   style={{
@@ -201,18 +207,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Maths"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Maths ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -225,21 +238,28 @@ const UploadedPDF = () => {
                   }}
                 >
                   Upload on English Department
-                </span> 
+                </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Eng"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    English ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -255,18 +275,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Urdu"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Urdu ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -282,18 +309,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Bba"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    BBA ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+          <div className="col-12 col-md-3" >
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -309,18 +343,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Chemistry"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Chemistry ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -336,18 +377,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Botnay"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Botnay ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -363,18 +411,25 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Bio"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Biology ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+          <div className="col-12 col-md-3 cal">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -390,20 +445,27 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Psyc"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Psychology ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+          <div className="col-12 col-md-3" >
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -419,20 +481,27 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/Phy"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Physics ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
 
           {/* Card 3 */}
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -448,20 +517,27 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">Show</button>
+                <button className="card-int__button">
+                <Link
+                    to="/ecnomics"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Ecnomics ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
 
           {/* Card 4 */}
           <div className="col-12 col-md-3">
-            <div className="card shadow-sm">
+            <div className="card shadow-sm" style={{backgroundColor:"black", color:"white"}}>
               <div className="card__img" style={{ height: "150px" }}>
-              <span
+                <span
                   style={{
                     textAlign: "center",
                     display: "flex",
@@ -477,13 +553,19 @@ const UploadedPDF = () => {
                 </span>
               </div>
               <div className="card-body text-center">
-                <h5 className="card-title">This is the article title</h5>
+                {/* <h5 className="card-title">This is the article title</h5> */}
                 <p className="card-text">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
-                <button className="card-int__button">  <Link to="/Home" style={{ textDecoration: "none", color: "inherit" }}>
-          How
-        </Link></button>
+                <button className="card-int__button">
+                  {" "}
+                  <Link
+                    to="/Islamic"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Islamyat ✈
+                  </Link>
+                </button>
               </div>
             </div>
           </div>

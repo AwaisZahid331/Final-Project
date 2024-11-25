@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Link } from "react-router-dom";
 
 
 const Maths = () => {
@@ -24,6 +24,11 @@ const Maths = () => {
   return (
     <>
       <div className="container-fluid " style={{backgroundColor:"#002244"}}>
+      <strong>
+        <Link to="/uploadedPDF" style={{ textDecoration: "none", color: "orange" }}>
+        Back to uploads Page
+        </Link>
+      </strong>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
           Navigate through Maths Semesters
         </h1>

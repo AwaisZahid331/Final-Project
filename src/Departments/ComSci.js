@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import './ComSci.css';
+import { Link } from "react-router-dom";
 
 
-
-
- 
 const ComSci = () => {
   const [currentSemester, setCurrentSemester] = useState(0);
   const [selectedSemester, setSelectedSemester] = useState(null); 
@@ -26,9 +23,14 @@ const ComSci = () => {
 
   return (
     <>
-      <div className="container-fluid mt-5" style={{backgroundColor:"#002244"}}>
+      <div className="container-fluid " style={{backgroundColor:"#002244"}}>
+      <strong style={{top:"14px"}}>
+        <Link to="/uploadedPDF" style={{ textDecoration: "none", color: "orange", marginLeft:"15px" }}>
+        Back to uploads Page
+        </Link>
+      </strong>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
-          Navigate through CS Semesters
+          Navigate through Computer Semesters
         </h1>
         <div className="progress-tracker">
           {/* Progress Milestones */}
@@ -45,7 +47,7 @@ const ComSci = () => {
           ))}
         </div>
         <hr />
-       
+        
         <div className="row align-items-center">
           <div className="col-md-6 text-center">
             <div className="my-4">
@@ -204,15 +206,15 @@ const ComSci = () => {
           </div>
           <div className="col-md-6 text-center">
             <img
-              src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg"
+              src="https://cdn.pixabay.com/photo/2024/02/21/13/49/ai-generated-8587765_960_720.jpg"
               alt="Computer Science"
               className="img-fluid"
+              style={{height:"350px", width:"433px"}}
             />
           </div>
         </div>
       </div>
-     
-     
+      
     </>
   );
 };

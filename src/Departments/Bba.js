@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import './ComSci.css';
 
-
+import { Link } from "react-router-dom";
 
 
  
@@ -26,9 +26,14 @@ const Bba = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container-fluid" style={{backgroundColor:"#002244"}}>
+      <strong style={{color:"orange"}}>
+        <Link to="/uploadedPDF" style={{ textDecoration: "none", color: "orange" }}>
+          Back to Uploads Page
+        </Link>
+      </strong>
         <h1 className="text-center mt-4" style={{ color: "rgb(255, 140, 0)" }}>
-          Navigate through CS Semesters
+          Navigate through BBA Semesters
         </h1>
         <div className="progress-tracker">
           {/* Progress Milestones */}
@@ -211,8 +216,7 @@ const Bba = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
+     
     </>
   );
 };

@@ -13,121 +13,104 @@ const S1 = () => {
 
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="container mt-5">
-        <h3>Download Past Papers</h3>
-        <hr />
-        {/* <uploadedPDF/> */}
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <div className="d-flex justify-content-between">
-              <div>
-                <h5 className="text-center mb-4">
-                  Calculus & Analytical Geometry
-                </h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-3">
-              <div>
-                <h5 className="text-center mb-4">Programming Fundamental</h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-3">
-              <div>
-                <h5 className="text-center mb-4">Islamic Studies</h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-3">
-              <div>
-                <h5 className="text-center mb-4">ICT</h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-3">
-              <div>
-                <h5 className="text-center mb-4">Applied Physics</h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-3">
-              <div>
-                <h5 className="text-center mb-4">Functional English</h5>
-              </div>
-              <div>
-                <button className="btn btn-primary" onClick={downloadPDF}>
-                  Download PDF
-                </button>
-              </div>
-            </div>
-            <br />
-            <br />
-            <h2 style={{ backgroundColor: "gray" }}>
-              Additional Material
-            </h2>{" "}
-            <br />
-            <div className="container">
-              <div className="row">
-                <div className="col-md-5">
-                  <div className="card" style={{ width: "13rem" }}>
-                    <div className="card-body">
-                      <h5 className="card-title">Download C Extra Questions</h5>
-                      <button className="btn btn-primary" onClick={downloadPDF}>
-                        Download PDF
-                      </button>
-                    </div>
-                  </div>
-                </div>
+      <div
+      className="container-fluid py-5"
+      style={{
+        backgroundColor: "#002244",
+        minHeight: "100vh",
+        color: "#333",
+        fontFamily: "'Roboto', sans-serif",
+      }}
+    >
+      {/* Section Header */}
+      <div className="text-center mb-5">
+        <h2 style={{ fontWeight: "bold", color: "orange" }}>Download Past Papers</h2>
+        <p style={{ fontSize: "1.1rem", color: "white" }}>
+          Get access to past papers for better preparation and understanding.
+        </p>
+      </div>
 
-                <div className="col-md-5">
-                  <div className="card" style={{ width: "13rem" }}>
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <h6 className="card-subtitle mb-2 text-muted">
-                        Card subtitle
-                      </h6>
-                      <button className="btn btn-primary" onClick={downloadPDF}>
-                        Download PDF
-                      </button>
-                    </div>
-                  </div>
+      {/* Papers Section */}
+      <div className="container">
+        <div className="row">
+          {[
+            { name: "Calculus & Analytical Geometry" },
+            { name: "Programming Fundamentals" },
+            { name: "Islamic Studies" },
+            { name: "ICT" },
+            { name: "Applied Physics" },
+            { name: "Functional English" },
+          ].map((subject, index) => (
+            <div key={index} className="col-md-4 mb-4">
+              <div
+                className="card h-100 shadow"
+                style={{
+                  borderRadius: "10px",
+                  backgroundColor:"white",
+                  border: "none",
+                  transition: "transform 0.3s ease",
+                }}
+              >
+                <div className="card-body text-center" >
+                  <h5
+                    style={{
+                      fontWeight: "bold",
+                      color: "#007bff",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    {subject.name}
+                  </h5>
+                  <button
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: "#007bff",
+                      borderColor: "#007bff",
+                      padding: "10px 20px",
+                      fontWeight: "bold",
+                    }}
+                    onClick={downloadPDF}
+                  >
+                    Download PDF
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Additional Styling */}
+      <style jsx>{`
+        .card:hover {
+          transform: translateY(-5px);
+        }
+      `}</style>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div className="container">
         <UploadedPDF />
@@ -135,6 +118,14 @@ const S1 = () => {
     </>
   );
 };
+
+
+
+
+
+
+
+
 
 const UploadedPDF = () => {
   const [file, setFile] = useState(null);
@@ -204,7 +195,8 @@ const UploadedPDF = () => {
   };
 
   return (
-    <div className="pdf">
+
+    <div className="pdf" style={{backgroundColor:"blue"}}>
       <br />
       <br />
       <div className="formstyle">
