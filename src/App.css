@@ -263,8 +263,7 @@ p {
   }
 }
 
-
-.section{
+.section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,9 +302,9 @@ p {
 /* app.css */
 
 /* Signup form styling */
-.signup-form {
+/* .signup-form {
   position: absolute;
-  top: 50px; /* Adjust this value according to your navbar height */
+  top: 50px; 
   right: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -314,13 +313,13 @@ p {
 }
 .login-form {
   position: absolute;
-  top: 50px; /* Adjust this value according to your navbar height */
+  top: 50px; 
   right: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} */
 .navbar {
   z-index: 1000; /* Adjust the z-index value as needed */
 }
@@ -341,7 +340,7 @@ p {
 }
 
 /* ////////////////////// */
-.formstyle {
+/* .formstyle {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
@@ -350,11 +349,11 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
+} */
 
 /* Styling for input fields */
 .form-control {
-  width: calc(100% - 22px); /* Full width minus padding */
+  width: calc(100% - 22px);
   padding: 12px;
   margin: 10px 0;
   border: 2px solid #ddd;
@@ -489,7 +488,7 @@ p {
   /* padding-bottom: 0.4em; */
   background-color: #171717;
   border-radius: 25px;
-  transition: 0.4s ease-in-out;
+  /* transition: 0.4s ease-in-out; */
 }
 
 .form:hover {
@@ -649,16 +648,16 @@ p {
 }
 
 /* Modal content */
-.modal-content {
+/* .modal-content {
   box-shadow: inset 0 0 10px #171717;
   background: #171717;
   padding: 20px;
-  /* border-radius: 8px; */
-  /* box-shadow: 10px 10px 10px rgba(165, 8, 8, 0.1); */
+  border-radius: 8px; 
+  box-shadow: 10px 10px 10px rgba(165, 8, 8, 0.1);
   position: relative;
   max-width: 500px;
   width: 100%;
-}
+} */
 
 /* Close button */
 .close-modal {
@@ -685,22 +684,22 @@ p {
 }
 
 /* Modal content */
-.modal-content {
-  /* background: white; */
+/* .modal-content {
+  background: white;
   padding: 20px;
   border-radius: 10px;
   position: relative;
-}
+} */
 
 /* Close button */
-.modal-content span {
+/* .modal-content span {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
   font-size: 20px;
   color: rgb(255, 140, 0);
-}
+} */
 
 /* Full page black background */
 .black-background {
@@ -1493,7 +1492,7 @@ body {
   position: relative;
   overflow: hidden;
   animation: textAnimation 5s infinite;
-  border-radius: 10px ;
+  border-radius: 10px;
 }
 
 @keyframes textAnimation {
@@ -1929,8 +1928,6 @@ body {
   transform: translateX(7px); /* Add span animation if used */
 }
 
-
-
 /* Styling for logo */
 /* .logo {
   margin-left: 20px; 
@@ -1943,18 +1940,16 @@ body {
   display: block; 
 } */
 
-.search{
+.search {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-
-.search iinput{
+.search iinput {
   width: 33rem;
 }
-/* From Uiverse.io by tiagoadag1203 */ 
+/* From Uiverse.io by tiagoadag1203 */
 .iinput {
   max-width: 13rem;
   /* background-color: rgb(255, 140, 0); */
@@ -1987,15 +1982,13 @@ body {
   }
 }
 
-
-
 /* This is just for resume building */
-.m-auto{
+.m-auto {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-.gear{
+.gear {
   /* background-color: #0056b3; */
   /* height: 34px; */
   font-size: 37px;
@@ -2003,43 +1996,32 @@ body {
   margin: -2px 14px;
 }
 
-.ger{
+.ger {
   height: 34px;
 }
 
-
-
-
-.btn-2{
+.btn-2 {
   margin-left: 16px;
 }
-.btn-3{
+.btn-3 {
   margin-left: 16px;
 }
-.btn-4{
+.btn-4 {
   margin-left: 16px;
 }
-.btn-1{
+.btn-1 {
   margin-left: 16px;
 }
-
-
-
-
 
 /* Remove margin/padding between sections */
 .section-2 {
   padding: 50px 0;
-  margin-top: 0;  /* Remove any extra space */
+  margin-top: 0; /* Remove any extra space */
   background-color: #002244;
   color: white;
 }
 
-
-
-
-
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2047,24 +2029,6 @@ header{
   /* padding: 20px; */
   height: 80px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* for footer */
 .footer {
@@ -2119,11 +2083,8 @@ h4 {
   color: #ccc;
 }
 
-
-
-
 /* this is for upload page\ */
-  
+
 .card {
   width: 300px;
   position: relative;
@@ -2157,7 +2118,8 @@ h4 {
   transition: all 0.1s ease-in;
 }
 
-.card:hover:before, .card:hover:after {
+.card:hover:before,
+.card:hover:after {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -2172,7 +2134,7 @@ h4 {
 .card__img {
   position: relative;
   /* background: #a62a00; */
-  background: linear-gradient(315deg,#ec8005, #047fe4);
+  background: linear-gradient(315deg, #ec8005, #047fe4);
   width: 100%;
   height: 175px;
 }
@@ -2206,38 +2168,40 @@ h4 {
 }
 
 .card-int__button {
-  --border: 2px;    /* the border width */
-  --slant: 0.7em;   /* control the slanted corners */
+  --border: 2px; /* the border width */
+  --slant: 0.7em; /* control the slanted corners */
   --color: #eeb310; /* the color */
-  
+
   font-size: 25px;
   padding: 0.4em 1.2em;
   border: none;
   cursor: pointer;
   font-weight: bold;
   color: var(--color);
-  background: 
-     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
-     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
-  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background: linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top
+      right,
+    linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
   background-repeat: no-repeat;
-  box-shadow:
-    0 0 0 200px inset var(--s,#0000),
+  box-shadow: 0 0 0 200px inset var(--s, #0000),
     0 0 0 var(--border) inset var(--color);
-  clip-path: 
-      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
-              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
-             );
-  transition: color var(--t,0.3s), background-size 0.3s;
-
-  
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+  transition: color var(--t, 0.3s), background-size 0.3s;
 }
-.card-int__button:hover, .card-int__button:active{
+.card-int__button:hover,
+.card-int__button:active {
   background-size: 100% 100%;
   color: #fff;
   --t: 0.2s 0.1s;
 }
-
 
 .card-int__button:hover::before {
   transform: translateX(0%);
@@ -2279,7 +2243,171 @@ h4 {
   }
 }
 
-
-.cal:hover{
+.cal:hover {
   background-color: blue;
-  }
+}
+
+.btn-purple {
+  background-color: #6a0dad; /* Purple color */
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-purple:hover {
+  background-color: #5a0cac; /* Darker purple on hover */
+  transform: scale(1.05); /* Slight scaling on hover */
+  color: white;
+}
+
+/* Container styles for centering */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+.animated-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #cb9011, #2575fc);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animated-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animated-btn .stretched-link {
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.animated-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  opacity: 0;
+  transform: scale(0.9); 
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+/* this is for resume */
+
+
+.resume-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.resume-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.resume-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.resume-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+  background: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is for login page styling */
+/* Custom animations for input fields */
+.animate-input {
+  position: relative;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.animate-input:focus {
+  background: #fff;
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Card shadow hover effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}

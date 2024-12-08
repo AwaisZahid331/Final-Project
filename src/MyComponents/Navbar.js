@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate, } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import { Navigate } from "react-router-dom";
 import Signup from "./Signup";
 import Login from "./Login";
 import "../App.css";
+// import LogoutBtn from "./LogoutBtn";
 
 const Navbar = () => {
   const [showSignup, setShowSignup] = useState(false);
@@ -28,7 +30,7 @@ const Navbar = () => {
 
 
   const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Mapping of search queries to routes
   const pageRoutes = {
@@ -42,7 +44,7 @@ const Navbar = () => {
     signup: "/signup",
     "computer science": "/ComSci",
     bba: "/bba",
-    bio: "/bio",
+    biology: "/bio",
     botany: "/botnay",
     chemistry: "/chemistry",
     economics: "/ecnomics",
@@ -53,7 +55,7 @@ const Navbar = () => {
     "islamic studies": "/islamic",
     english: "/eng",
     pastpapers: "/pastpapers",
-  
+
   };
 
   // Handle search
@@ -66,47 +68,75 @@ const Navbar = () => {
     }
   };
 
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkLoginStatus = () => {
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!!token);
+    };
+    checkLoginStatus();
+
+    const storageListener = () => checkLoginStatus();
+    window.addEventListener("storage", storageListener);
+
+    return () => {
+        window.removeEventListener("storage", storageListener);
+    };
+}, []);
+
+const handleLogout = () => {
+    localStorage.removeItem("token");
+    // No need to explicitly set setIsLoggedIn(false) here; the event listener will handle it.
+    navigate("/login");
+};
+
+
+
+
   return (
     <>
-     <header className="py-3 p-fixed">
-      <div className="container">
-        <div className="row justify-content-center align-items-center text-center">
-          {/* Logo Section */}
-          <div className="col-12 col-md-4 mb-3 mb-md-0">
-            <img
-              src="https://api.logo.com/api/v2/images?logo=logo_f9ae6ece-63b8-424a-9c61-b100a75b0a18&format=webp&width=2000&background=transparent&fit=contain&quality=100&u=2024-09-25T21%3A12%3A33.016Z"
-              alt="Logo"
-              style={{ maxWidth: "150px" }}
-            />
-          </div>
-
-          {/* Search Bar Section */}
-          <div className="col-12 col-md-6">
-            <div className="input-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Type here..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{ height: "44px", borderRadius: "4px" }}
+      <header className="py-3 p-fixed">
+        <div className="container">
+          <div className="row justify-content-center align-items-center text-center">
+            {/* Logo Section */}
+            <div className="col-12 col-md-4 mb-3 mb-md-0">
+              <img
+                src="https://api.logo.com/api/v2/images?logo=logo_f9ae6ece-63b8-424a-9c61-b100a75b0a18&format=webp&width=2000&background=transparent&fit=contain&quality=100&u=2024-09-25T21%3A12%3A33.016Z"
+                alt="Logo"
+                style={{ maxWidth: "150px" }}
               />
-              <button
-                className="btn btn-primary text-white fw-bold"
-                type="button"
-                onClick={handleSearch}
-                style={{
-                  backgroundColor: "orange",
-                  height: "44px",
-                  marginTop: "10px",
-                }}
-              >
-                Search
-              </button>
             </div>
-          </div>
 
-          {/* Social Icons Section */}
+            {/* Search Bar Section */}
+            <div className="col-12 col-md-6">
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Type here..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{ height: "44px", borderRadius: "4px" }}
+                />
+                <button
+                  className="btn btn-primary text-white fw-bold"
+                  type="button"
+                  onClick={handleSearch}
+                  style={{
+                    backgroundColor: "orange",
+                    height: "44px",
+                    marginTop: "10px",
+                  }}
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            {/* Social Icons Section */}
             {/* Social Icons Section */}
             <div className="col-12 col-md-2 mt-3 mt-md-0">
               <div className="d-flex justify-content-center align-items-center gap-3">
@@ -177,114 +207,129 @@ const Navbar = () => {
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
                   </svg>
                 </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
       <nav
-        className="navbar navbar-expand-lg navbar-dark shadow"
-        style={{ backgroundColor: "white " }}
-      >
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/home"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/about"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/pastpapers"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  Exam Archives
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/contact"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  Contact
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/help"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  Help
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/uploadedPDF"
-                  activeClassName="active"
-                  style={{ color: "black", fontWeight: "bold" }}
-                >
-                  Resources
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink
-                  style={{ color: "black", fontWeight: "bold" }}
-                  className="nav-link"
-                  to="/check"
-                  activeClassName="active"
-                >
-                  Resume Building
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          <div>
-            {popup && <div>{popup}</div>}
-            <button className="sn" onClick={handleSignupClick}>
-              Sign Up
-            </button>
-            <button className="sn" onClick={handleLoginClick}>
-              Login
-            </button>
-          </div>
+      className="navbar navbar-expand-lg navbar-dark shadow"
+      style={{ backgroundColor: "white" }}
+    >
+      <div className="container-fluid">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/home"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/about"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/pastpapers"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                Exam Archives
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/contact"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/help"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                Help
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/uploadedPDF"
+                activeClassName="active"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                Resources
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                style={{ color: "black", fontWeight: "bold" }}
+                className="nav-link"
+                to="/ResumeBuilder"
+                activeClassName="active"
+              >
+                Resume Building
+              </NavLink>
+            </li>
+          </ul>
         </div>
-      </nav>
+        <div>
+          {isLoggedIn ? (
+            <button
+              className="sn btn btn-danger"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          ) : (
+            <>
+              <button
+                className="sn btn btn-primary mx-2"
+                onClick={() => navigate("/signup")}
+              >
+                Sign Up
+              </button>
+              <button
+                className="sn btn btn-secondary"
+                onClick={() => navigate("/login")}
+              >
+                Login
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    </nav>
 
       {/* Modal for Signup */}
       {showSignup && (

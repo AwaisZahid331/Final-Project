@@ -11,7 +11,7 @@ import UploadedPDF from "./MyComponents/uploadedPDF";
 // For authentication
 import Signup from "./MyComponents/Signup";
 import Login from "./MyComponents/Login";
-import ForgotPassword from "./MyComponents/ForgotPassword";
+// import ForgotPassword from "./MyComponents/ForgotPassword";
 // Departments
 import ComSci from "./Departments/ComSci";
 import Bba from "./Departments/Bba";
@@ -25,6 +25,7 @@ import Maths from "./Departments/Maths";
 import Phy from "./Departments/Phy";
 import Psyc from "./Departments/Psyc";
 import Urdu from "./Departments/Urdu";
+import ResumeBuilder from "./MyComponents/ResumeBuilder";
 
 // Computer science semesters
 import S1 from "./CS_Semesters/S1";
@@ -146,24 +147,33 @@ import Us8 from "./Urdu_Semesters/Us8";
 
 
 
+
 function App() {
+  const isLoggedIn = localStorage.getItem('token') ? true : false;
   return (
     <>
-      
+
       <Router>
-       <Navbar/> 
+
+        <Navbar />
         <Routes>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/pastpapers" element={<PastPapers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
           <Route path="/uploadedPDF" element={<UploadedPDF />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-      
+          <Route path="/resumebuilder" element={<ResumeBuilder />} />
 
-          {/* <Route path="/signup" element={<Signup />} /> */}
+
+          <Route path="/signup" element={<Signup />} />
+
+          {/* Default route */}
+          <Route path="*" element={<Signup />} />
+
+
 
           <Route path="/ComSci" element={<ComSci />} />
           <Route path="/bba" element={<Bba />} />
@@ -291,12 +301,11 @@ function App() {
           <Route path="/ps7" element={<Us7 />} />
           <Route path="/ps8" element={<Us8 />} />
 
-          {/* Default route */}
-          <Route path="*" element={<Home />} />
+         
         </Routes>
         <Footer />
 
-      
+
       </Router>
     </>
   );
