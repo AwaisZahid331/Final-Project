@@ -288,7 +288,7 @@ const handleLogout = () => {
                 activeClassName="active"
                 style={{ color: "black", fontWeight: "bold" }}
               >
-                Resources
+                Upload Data
               </NavLink>
             </li>
             <li className="nav-item">

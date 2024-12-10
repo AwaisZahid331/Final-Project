@@ -149,7 +149,7 @@ import Us8 from "./Urdu_Semesters/Us8";
 
 
 function App() {
-  const isLoggedIn = localStorage.getItem('token') ? true : false;
+  
   return (
     <>
 

@@ -1,152 +1,431 @@
 import React from 'react';
-import { FaBook, FaCode, FaPenFancy, FaChartPie, FaMicrochip } from "react-icons/fa";
+import { FaDownload, FaCalendarAlt } from 'react-icons/fa';
+
 const S2 = () => {
-  const downloadPDF = () => {
+
+
+  const downloadPDF = (fileUrl) => {
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/PDF's/p1.pdf`; // Replace with your PDF file name
-    link.download = 'downloadedPDF.pdf';
+    link.href = fileUrl; // Use the raw GitHub URL for the file
+    link.download = fileUrl.split('/').pop();  // This extracts the filename from the URL for downloading
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <>
-      <div className="container-fluid py-5" style={{ backgroundColor: "#002244" }}>
-        <h1 className="text-center text-white mb-5">Download Past Papers</h1>
-        <hr />
-        <div className="row justify-content-center g-0">
-          {/* Card 1 */}
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
-              style={{
-                backgroundColor: "#fff5e6",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              <FaBook className="display-1 text-warning mb-3" />
-              <h5 className="card-title">Discrete Structure</h5>
-              <button className="btn btn-warning mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
+    <div className="container-fluid " style={{ background: "linear-gradient(135deg, #141E30, #243B55)", padding: "40px" }}>
+      <h3
+        className="text-center mb-4"
+        style={{
+          fontSize: "2.5rem",
+          color: "white",
+          fontWeight: "600",
+          animation: "fadeIn 2s ease-in-out",
+          fontFamily:"sans-serif"
+        }}
+      >
+        Explore 2nd Semester Past Papers Sorted by Year
+      </h3>
 
-          {/* Card 2 */}
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
-              style={{
-                backgroundColor: "#e6f7ff",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              <FaCode className="display-1 text-primary mb-3" />
-              <h5 className="card-title">Object-Oriented Programming</h5>
-              <button className="btn btn-primary mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
 
-          {/* Card 3 */}
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
-              style={{
-                backgroundColor: "#f0f0f0",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              <FaChartPie className="display-1 text-success mb-3" />
-              <h5 className="card-title">Statistics</h5>
-              <button className="btn btn-success mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
+      {/* Download Button Below Heading */}
 
-          {/* Card 4 */}
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
-              style={{
-                backgroundColor: "#ffe6e6",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              <FaMicrochip className="display-1 text-danger mb-3" />
-              <h5 className="card-title">Digital Logic and Design</h5>
-              <button className="btn btn-danger mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
 
-          {/* Card 5 */}
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
+      <div
+        className="table-container"
+        style={{
+          height: "400px", // Set a fixed height for the container
+          overflowY: "auto", // Enable vertical scrolling
+          overflowX: "auto",
+          borderRadius: "10px",
+          boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+          scrollBehavior: "smooth", // Smooth scrolling effect
+        }}
+      >
+        <style>
+          {`
+    /* Custom scrollbar styling */
+    .table-container::-webkit-scrollbar {
+      width: 12px; /* Scrollbar width */
+    }
+    .table-container::-webkit-scrollbar-track {
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Gradient background */
+      border-radius: 10px;
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #00796b, #004d40); /* Gradient scrollbar */
+      border-radius: 10px;
+      border: 2px solid #ffffff; /* Adds a border around the scrollbar */
+    }
+    .table-container::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #004d40, #00251a); /* Darker gradient on hover */
+    }
+
+    /* Scrollbar animation */
+    @keyframes scroll-highlight {
+      0%, 100% {
+        background: #00796b;
+      }
+      50% {
+        background: #004d40;
+      }
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      animation: scroll-highlight 2s infinite; /* Smooth color transition */
+    }
+    `}
+        </style>
+        <table
+          className="table table-hover text-center"
+          style={{
+            backgroundColor: "#ffffff",
+            borderRadius: "10px",
+            borderCollapse: "collapse",
+            width: "100%",
+            fontFamily:"sans-serif"
+          }}
+        >
+          <thead>
+            <tr
               style={{
-                backgroundColor: "#fff0f5",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
+                backgroundColor: "#00796b",
+                color: "#fff",
+                fontSize: "1.2rem",
+                fontWeight: "500",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
-              <FaPenFancy className="display-1 text-purple mb-3" />
-              <h5 className="card-title">Comprehension & Presentation Skills</h5>
-              <button className="btn btn-purple mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
-          <div className="col-md-4 d-flex justify-content-center">
-            <div
-              className="card text-center p-4 shadow"
+              <th style={{ width: "70%" }}>Year</th>
+              <th style={{ width: "30%" }}>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="table-row"
               style={{
-                backgroundColor: "#fff0f5",
-                borderRadius: "15px",
-                transform: "scale(1)",
-                transition: "transform 0.3s ease",
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
-              <FaPenFancy className="display-1 text-purple mb-3" />
-              <h5 className="card-title">Comprehension & Presentation Skills</h5>
-              <button className="btn btn-purple mt-3" onClick={downloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
-        </div>
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                Discrete Structure
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/FA%20CS%202019.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                Object Oriented Programming
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202017.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                Digital Logic Design
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202018.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                Language Comprehension and Presentation Skills
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202018.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                Statistics and Probability
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202018.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "orange",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                2018
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202018.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+            <tr
+              className="table-row"
+              style={{
+                transition: "all 0.2s ease",
+                borderBottom: "2px solid #eeeeee",
+                cursor: "pointer",
+                height: "60px",
+              }}
+            >
+              <td
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "10px",
+                }}
+              >
+                <FaCalendarAlt className="me-2" style={{ color: "blue" }} />
+                2018
+              </td>
+              <td style={{ textAlign: "center" }}>
+                <button
+                  className="btn btn-outline-primary rounded-circle"
+                  onClick={() => downloadPDF("https://raw.githubusercontent.com/AwaisZahid331/Data-pdf/main/PP%20CS%202018.pdf")}
+                  style={{
+                    padding: "10px",
+                    fontSize: "1.2rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#00796b",
+                    borderColor: "#00796b",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#004d40")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#00796b")
+                  }
+                >
+                  <FaDownload />
+                </button>
+
+              </td>
+            </tr>
+
+
+            {/* Add more rows here as needed */}
+          </tbody>
+        </table>
       </div>
 
 
-
-
-    </>
+    </div>
   );
 };
 
 export default S2;
+
